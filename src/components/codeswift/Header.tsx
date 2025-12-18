@@ -31,20 +31,20 @@ export function Header() {
   const navItems = [
     { name: 'Home', id: 'home' },
     { name: 'Services', id: 'services' },
-    { name: 'Why Us', id: 'why-us' },
-    { name: 'Team', id: 'leadership' },
+    { name: 'About', id: 'why-us' },
+    { name: 'Career', id: 'leadership' },
     { name: 'Clients', id: 'clients' },
   ];
 
   return (
-    <header 
-      className={`fixed w-full z-50 py-4 px-4 sm:px-6 lg:px-8 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-black/70 backdrop-blur-md py-3 border-b border-white/5 shadow-xl' 
-          : 'bg-black/30 backdrop-blur-sm'
+    <header
+      className={`fixed w-full z-50 px-5 sm:px-8 lg:px-10 transition-all duration-300 ${
+        scrolled
+          ? 'bg-black/95 border-b border-white/10 shadow-[0_6px_24px_rgba(0,0,0,0.35)] py-4'
+          : 'bg-black/90 border-b border-white/5 py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link 
@@ -66,22 +66,21 @@ export function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-10">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-gray-300 hover:text-white px-4 py-2 text-sm font-medium transition-all duration-300 relative group"
+              className="text-white/80 hover:text-white text-base font-medium tracking-normal"
             >
               {item.name}
-              <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-4/5 group-hover:left-1/10"></span>
             </button>
           ))}
-          <button 
+          <button
             onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-full text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-purple-500/20"
+            className="inline-flex items-center justify-center px-7 py-2.5 text-base font-semibold rounded-full text-black bg-white hover:bg-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all"
           >
-            Get Quote
+            Contact us
           </button>
         </nav>
 

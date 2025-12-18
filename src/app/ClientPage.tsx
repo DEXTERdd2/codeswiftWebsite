@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Header } from "@/components/codeswift/Header";
 import { Hero } from "@/components/codeswift/Hero";
 import { Services } from "@/components/codeswift/Services";
-import { Clients } from "@/components/codeswift/Clients";
+import { TrustedBy } from "@/components/codeswift/TrustedBy";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import { Leadership } from "@/components/leadership";
 import { PortfolioNew } from "@/components/portfolio-new";
@@ -98,10 +98,10 @@ export default function ClientPage() {
       <Header />
       <main>
         <Hero />
+        <TrustedBy />
         <Services />
-        <PortfolioNew />
         <WhyChooseUs />
-        <Clients />
+        <PortfolioNew />
         <Leadership />
         <ContactForm />
         <FAQ />
@@ -111,9 +111,9 @@ export default function ClientPage() {
       <style jsx global>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         
-        /* Hide default cursor */
+        /* Default cursor restored */
         html, body {
-          cursor: none !important;
+          cursor: auto;
         }
         
         body {

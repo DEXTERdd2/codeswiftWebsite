@@ -1,6 +1,8 @@
 import { Header } from '@/components/codeswift/Header';
 import { Hero } from '@/components/codeswift/Hero';
 import { Clients } from '@/components/codeswift/Clients';
+import { Services } from '@/components/codeswift/Services';
+import { WhyChooseUs } from '@/components/why-choose-us';
 
 export default function CodeSwiftPage() {
   return (
@@ -8,6 +10,8 @@ export default function CodeSwiftPage() {
       <Header />
       <main>
         <Hero />
+        <Services />
+        <WhyChooseUs />
         <Clients />
       </main>
       <style jsx global>{`

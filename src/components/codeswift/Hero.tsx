@@ -2,51 +2,65 @@ import Image from 'next/image';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full filter blur-3xl -z-10" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full filter blur-3xl -z-10" />
-      
-      {/* Cursor Image - Left side */}
-      <div className="absolute left-[-50px] top-1/3 -translate-y-1/2 -z-10 w-[200px] h-[200px]">
-        <Image 
-          src="/images/cursor.png" 
-          alt="Cursor"
+    <section
+      id="home"
+      className="relative isolate overflow-hidden bg-black pt-28 pb-24 flex items-center justify-center min-h-[760px]"
+    >
+      {/* Layered gradients to mirror the Figma hero */}
+      {/* Top background using provided Figma gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(180deg, #000000 0%, #200D42 36.21%, #4F21A1 68.68%, #8752FA 86.54%)",
+        }}
+      />
+
+      {/* Bottom arc / horizon (simple black ellipse over purple gradient) */}
+      <div className="absolute inset-x-[-18%] bottom-[-12%] h-[520px] bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,1)_0%,_rgba(0,0,0,0.96)_32%,_rgba(0,0,0,0.75)_60%,_transparent_90%)]" />
+      <div className="absolute inset-x-[-10%] bottom-[4%] h-[68px] bg-[radial-gradient(ellipse_at_bottom,_rgba(255,255,255,0.55)_0%,_transparent_80%)] opacity-70" />
+
+      {/* Floating 3D assets */}
+      <div className="absolute left-2 md:left-10 top-[60%] -translate-y-1/2 w-36 h-36 md:w-52 md:h-52">
+        <Image
+          src="/images/cursor.png"
+          alt="Decorative arrow"
           fill
-          className="object-contain opacity-80 animate-float"
+          className="object-contain drop-shadow-[0_26px_80px_rgba(130,104,255,0.5)] animate-float"
           priority
         />
       </div>
-      
-      {/* Speech Bubble - Right side */}
-      <div className="absolute right-[-50px] top-1/2 -translate-y-1/2 -z-10 w-[250px] h-[250px]">
-        <Image 
-          src="/images/speech-bubble.png" 
-          alt="Speech Bubble"
+      <div className="absolute right-[-10px] md:right-4 top-[60%] -translate-y-1/2 w-44 h-44 md:w-64 md:h-64">
+        <Image
+          src="/images/message1.png"
+          alt="Decorative bubble"
           fill
-          className="object-contain opacity-80 animate-float-delay"
+          className="object-contain drop-shadow-[0_30px_90px_rgba(130,104,255,0.55)] animate-float-delay"
           priority
         />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 pt-20">
-        <div className="max-w-4xl mx-auto text-center relative z-20">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold leading-tight mb-8">
-            Innovative <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">Software Solutions</span> for the future
-          </h1>
-          
-          <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-            At CodeSwift, we deliver tailored IT solutions that drive business growth. With expertise in software development, cloud services, and IT consulting.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-6 relative z-20">
-            <button className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-opacity-90 transition-all transform hover:-translate-y-1 text-lg">
-              Get Quote
-            </button>
-            <button className="bg-transparent border-2 border-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-900/30 transition-all transform hover:-translate-y-1 text-lg">
-              View All Solutions
-            </button>
-          </div>
+      <div className="relative z-10 w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-[50px] sm:text-[68px] md:text-[82px] lg:text-[92px] leading-[1.02] font-black text-white drop-shadow-[0_20px_60px_rgba(0,0,0,0.85)] tracking-[-0.04em]">
+          <span className="block text-white">
+            Innovative {""}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F472FF] via-[#C084FC] to-[#8B5CF6]">
+              Software
+            </span>
+          </span>
+          <span className="block text-white">Solutions for the future</span>
+        </h1>
+        <p className="mt-7 text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+          At CodeSwift, we deliver tailored IT solutions that drive business growth. With expertise in software development, cloud services, and IT consulting.
+        </p>
+
+        <div className="mt-11 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
+          <button className="px-11 py-3.5 bg-white text-black text-lg font-semibold rounded-full shadow-[0_22px_44px_rgba(0,0,0,0.28)] hover:-translate-y-[2px] transition-all duration-200">
+            Contact Us
+          </button>
+          <button className="relative px-11 py-3.5 rounded-full text-white text-lg font-semibold bg-white/0 hover:bg-white/6 transition-all duration-200 border border-white/18 shadow-[inset_0_0_0_1px_rgba(127,99,255,0.28)] after:content-[''] after:absolute after:inset-0 after:rounded-full after:border after:border-white/12 after:pointer-events-none">
+            View All Solutions
+          </button>
         </div>
       </div>
     </section>

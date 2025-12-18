@@ -1,99 +1,149 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { X, Asterisk, Sparkles, Shield } from "lucide-react";
 
 const features = [
   {
-    icon: <X className="w-8 h-8 text-white" />,
+    iconSrc: "/images/design1.png",
     title: "Expertise & Innovation",
-    description: "We combine years of experience with cutting-edge tech to deliver high-performance software."
+    description:
+      "We combine years of experience with cutting-edge tech to deliver high-performance software.",
   },
   {
-    icon: <Asterisk className="w-8 h-8 text-white" />,
+    iconSrc: "/images/design3.png",
     title: "Custom & Scalable Solutions",
-    description: "Every project is tailored to your needs, ensuring flexibility and growth for your business."
+    description:
+      "Every project is tailored to your needs, ensuring flexibility and growth for your business.",
   },
   {
-    icon: <Sparkles className="w-8 h-8 text-white" />,
+    iconSrc: "/images/design2.png",
     title: "User-Centric Design",
-    description: "We prioritize intuitive, clean, and modern UI/UX to enhance usability and engagement."
+    description:
+      "We prioritize intuitive, clean, and modern UI/UX to enhance usability and engagement.",
   },
   {
-    icon: <X className="w-8 h-8 text-white" />,
+    iconSrc: "/images/design4.png",
     title: "End-To-End Support",
-    description: "From planning to post-launch maintenance, we guide you at every step to ensure success."
-  }
+    description:
+      "From planning to post-launch maintenance, we guide you at every step to ensure success.",
+  },
 ];
 
 const stats = [
-  { 
-    number: "150+", 
-    label: "Completed Projects", 
-    description: "Delivering quality results with over 150 successful projects globally." 
+  {
+    number: "150+",
+    label: "Completed Projects",
+    description:
+      "Delivering quality results with over 150 successful projects globally.",
   },
-  { 
-    number: "500+", 
-    label: "Worldwide Partners", 
-    description: "Trusted by 500+ clients, delivering innovative solutions that exceed expectations." 
+  {
+    number: "500+",
+    label: "Worldwide Partners",
+    description:
+      "Trusted by 500+ clients, delivering innovative solutions that exceed expectations.",
   },
-  { 
-    number: "98%+", 
-    label: "Positive Feedback", 
-    description: "Proven excellence with a 98% satisfaction rate, delivering top tech solutions that drive success." 
-  }
+  {
+    number: "98+",
+    label: "Positive Feedback",
+    description:
+      "Proven excellence with a 98% satisfaction rate, delivering top tech solutions that drive success.",
+  },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section id="why-us" className="relative py-20 bg-gradient-to-b from-gray-900 to-black overflow-hidden">
-      {/* Background elements */}
+    <section
+      id="why-us"
+      className="relative overflow-hidden bg-gradient-to-b from-[#2b1955] via-[#1f1242] to-[#140a2d] py-20 text-white"
+    >
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-stripes.png')] opacity-5"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(139,92,246,0.18),transparent_40%),radial-gradient(circle_at_85%_12%,rgba(96,165,250,0.18),transparent_42%),radial-gradient(circle_at_50%_75%,rgba(129,140,248,0.2),transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.04),transparent_60%)]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10 relative z-10">
+        <div className="grid items-start gap-6 lg:grid-cols-[1.1fr_1fr] mb-12">
+          <motion.h2
+            className="font-black text-center md:text-left"
+            style={{
+               
+              fontWeight: 700,
+              fontSize: "74.03px",
+              lineHeight: "82.26px",
+              letterSpacing: "-0.06em",
+            }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <span className="text-white">Why </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-purple-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ba8cff] via-[#a56cff] to-[#7f5bff]">
               Hire Us?
             </span>
-          </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            At CodeSwift, we deliver tailored IT solutions that drive business growth. With expertise in software development, cloud services, and IT consulting.
-          </p>
+          </motion.h2>
+
+          <motion.p
+            className="text-lg md:text-xl text-white/90 leading-relaxed"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.08 }}
+          >
+            At CodeSwift, we deliver tailored IT solutions that drive business growth. With expertise in software
+            development, cloud services, and IT consulting.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7 mb-14 justify-items-center">
           {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+            <motion.div
+              key={feature.title}
+              className="relative flex h-[420px] w-full max-w-[235px] flex-col justify-between overflow-hidden rounded-[15px] border border-transparent [background:linear-gradient(#2b0f65,#1a0d43)_padding-box,linear-gradient(180deg,#8752fa,rgba(255,255,255,0))_border-box] px-6 py-8 shadow-[2px_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[100px] transition-transform duration-200 hover:-translate-y-1.5"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600/30 to-blue-500/30 flex items-center justify-center mb-6">
-                {feature.icon}
+              <div className="absolute inset-0 bg-[url('/images/Rectangle.png')] bg-cover bg-center opacity-[0.2]" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(255,255,255,0.05),transparent_38%),radial-gradient(circle_at_80%_14%,rgba(255,255,255,0.04),transparent_36%),radial-gradient(circle_at_50%_85%,rgba(255,255,255,0.03),transparent_42%)]" />
+              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),transparent),linear-gradient(0deg,rgba(255,255,255,0.035),transparent_35%)]" />
+              <div className="relative z-10 flex h-full flex-col">
+                <div className="flex items-start justify-start">
+                  <div className="h-24 w-24 flex items-center justify-center">
+                    <img src={feature.iconSrc} alt={feature.title} className="h-32 w-32 object-contain" />
+                  </div>
+                </div>
+                <div className="mt-auto space-y-3 pt-10">
+                  <h3 className="text-xl font-semibold leading-tight text-white" style={{ fontSize: "21.35px" }}>
+                    {feature.title}
+                  </h3>
+                  <p className="text-base text-white/82 leading-relaxed" style={{ fontSize: "13.26px" }}>
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-          {stats.map((stat, index) => (
-            <div 
-              key={index} 
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 mb-3">
-                {stat.number}
+        <motion.div
+          className="rounded-3xl border border-white/16 bg-white/6 px-6 sm:px-10 md:px-12 py-9 shadow-[0_28px_90px_rgba(0,0,0,0.6)] backdrop-blur-xl"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45, delay: 0.12 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/60 text-center">
+            {stats.map((stat) => (
+              <div key={stat.label} className="px-4 py-6 md:py-4">
+                <div className="text-5xl font-black text-white leading-none mb-3">{stat.number}</div>
+                <div className="text-xl font-semibold text-white mb-2">{stat.label}</div>
+                <p className="text-sm text-white/75 leading-relaxed max-w-xs mx-auto">{stat.description}</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{stat.label}</h3>
-              <p className="text-gray-400 text-sm">{stat.description}</p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

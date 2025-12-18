@@ -31,185 +31,186 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="contact" className="relative overflow-hidden py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 items-start">
           {/* Left side - Text content */}
-          <div className="text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Looking for a trusted tech partner? <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">Let's connect!</span>
+          <div className="text-white space-y-6">
+            <h2
+              className="font-black leading-tight text-4xl md:text-5xl lg:text-6xl"
+              style={{ letterSpacing: "-0.03em" }}
+            >
+              Looking for a <span className="text-[#A56CFF]">trusted</span>
+              <br /> tech partner? <span className="text-white">Let's</span>
+              <br /> connect!
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
-              We're here to help you build innovative digital solutions that drive business growth. Our team of experts is ready to discuss your project and provide tailored solutions to meet your specific needs.
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
+              With expertise in software development, AI design, and cloud, we build systems that are secure,
+              scalable, and future-ready. Wherever you are in the world, we're here to turn your vision into reality.
             </p>
-            <div className="space-y-6">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg p-3">
-                  <Send className="h-6 w-6 text-white" />
-                </div>
-                <div className="ml-4">
-                  <h3 className="text-xl font-semibold text-white">Get in Touch</h3>
-                  <p className="text-gray-400">Have questions? We're here to help.</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right side - Form */}
-          <div className="bg-gray-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative overflow-hidden rounded-[28px] border border-white/18 shadow-[0_24px_80px_rgba(0,0,0,0.5)]">
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,#6b3fd6_0%,#1a0f35_55%,#06030a_100%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(255,255,255,0.08),transparent_32%),radial-gradient(circle_at_85%_10%,rgba(255,255,255,0.06),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(0,0,0,0.35),transparent_60%)]" />
+            <div className="relative p-8 md:p-10">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
+                      First Name
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-white mb-2">
+                      Last Name
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Company"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Phone"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="country" className="block text-sm font-medium text-white mb-2">
+                      Country
+                    </label>
+                    <input
+                      type="text"
+                      id="country"
+                      name="country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Country"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="region" className="block text-sm font-medium text-white mb-2">
+                      Region
+                    </label>
+                    <input
+                      type="text"
+                      id="region"
+                      name="region"
+                      value={formData.region}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Region"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-white mb-2">
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className="w-full h-11 px-4 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
+                </div>
+
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-1">
-                    First Name <span className="text-red-500">*</span>
+                  <label htmlFor="projectDetails" className="block text-sm font-medium text-white mb-2">
+                    Project Details
                   </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
+                  <textarea
+                    id="projectDetails"
+                    name="projectDetails"
+                    rows={4}
+                    value={formData.projectDetails}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="John"
+                    className="w-full px-4 py-2.5 bg-[#0F0B18] border border-white/12 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    placeholder="Project Details"
                     required
                   />
                 </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-1">
-                    Last Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Doe"
-                    required
-                  />
-                </div>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="john@example.com"
-                    required
-                  />
+                <div className="pt-1 flex justify-center">
+                  <button
+                    type="submit"
+                    className="w-full max-w-sm flex justify-center items-center px-10 py-4 text-lg font-semibold text-white bg-[#161616] border border-white/12 rounded-xl shadow-[0_18px_60px_rgba(0,0,0,0.55)] hover:-translate-y-0.5 hover:shadow-[0_26px_70px_rgba(0,0,0,0.6)] focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 transition-all duration-200"
+                  >
+                    <Send className="w-5 h-5 mr-2" />
+                    Submit
+                  </button>
                 </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-1">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Your Company"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="md:col-span-1">
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="+1 (___) ___-____"
-                  />
-                </div>
-                <div className="md:col-span-1">
-                  <label htmlFor="country" className="block text-sm font-medium text-gray-300 mb-1">
-                    Country
-                  </label>
-                  <input
-                    type="text"
-                    id="country"
-                    name="country"
-                    value={formData.country}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Select Country"
-                  />
-                </div>
-                <div className="md:col-span-1">
-                  <label htmlFor="region" className="block text-sm font-medium text-gray-300 mb-1">
-                    Region
-                  </label>
-                  <input
-                    type="text"
-                    id="region"
-                    name="region"
-                    value={formData.region}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Select Region"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-1">
-                  Subject <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="How can we help you?"
-                  required
-                />
-              </div>
-
-              <div>
-                <label htmlFor="projectDetails" className="block text-sm font-medium text-gray-300 mb-1">
-                  Project Details <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="projectDetails"
-                  name="projectDetails"
-                  rows={4}
-                  value={formData.projectDetails}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  placeholder="Tell us about your project..."
-                  required
-                />
-              </div>
-
-              <div className="pt-2">
-                <button
-                  type="submit"
-                  className="w-full flex justify-center items-center px-6 py-3.5 text-base font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-200"
-                >
-                  <Send className="w-5 h-5 mr-2" />
-                  Submit
-                </button>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </div>

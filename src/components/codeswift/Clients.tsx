@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 export function Clients() {
   const companies = [
-    { name: 'Acme Corp', text: 'ACME CORP' },
-    { name: 'Quantum', text: 'QUANTUM' },
-    { name: 'Echo Valley', text: 'ECHO VALLEY' },
-    { name: 'Celestial', text: 'CELESTIAL' },
-    { name: 'PULSE', text: 'PULSE' },
-    { name: 'APEX', text: 'APEX' },
+    { name: 'Acme Corp', src: '/images/acme1.png', width: 138 },
+    { name: 'Quantum', src: '/images/quantum1.png', width: 126 },
+    { name: 'Echo Valley', src: '/images/echo1.png', width: 142 },
+    { name: 'Celestial', src: '/images/celestia1.png', width: 124 },
+    { name: 'PULSE', src: '/images/pulse1.png', width: 112 },
+    { name: 'APEX', src: '/images/apex1.png', width: 110 },
   ];
 
   return (
@@ -29,18 +29,20 @@ export function Clients() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 items-center">
           {companies.map((company, index) => (
             <motion.div 
-              key={index} 
+              key={company.name} 
               className="flex justify-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <div className="relative h-12 flex items-center">
-                <span className="text-white text-lg font-semibold opacity-70 hover:opacity-100 transition-all duration-300 hover:text-purple-300">
-                  {company.text}
-                </span>
-              </div>
+              <img
+                src={company.src}
+                alt={company.name}
+                style={{ width: `${company.width}px`, height: 'auto' }}
+                className="opacity-75 hover:opacity-100 transition-opacity drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)]"
+                loading="lazy"
+              />
             </motion.div>
           ))}
         </div>
