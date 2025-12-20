@@ -1,3 +1,5 @@
+"use client";
+
 import { Header } from '@/components/codeswift/Header';
 import { Hero } from '@/components/codeswift/Hero';
 import { Clients } from '@/components/codeswift/Clients';

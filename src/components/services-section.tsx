@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Brain, Layout, Infinity, Target, Shield } from "lucide-react";
+import { Code, Brain, Layout, Infinity as InfinityIcon, Target, Shield } from "lucide-react";
 
 const services = [
   {
@@ -20,7 +20,7 @@ const services = [
     description: "Creative UX/UI design focused on intuitive, user-centered experiences."
   },
   {
-    icon: <Infinity className="w-8 h-8 text-white" />,
+    icon: <InfinityIcon className="w-8 h-8 text-white" />,
     title: "DevOps Operations",
     description: "Efficient DevOps for collaboration, automation, and faster software delivery."
   },

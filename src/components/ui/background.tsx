@@ -3,7 +3,16 @@
 import { motion, useAnimation } from "framer-motion"
 import { useEffect } from "react"
 
-const GlowingOrb = ({ x, y, size, color, delay = 0, opacity = 0.1 }) => {
+type GlowingOrbProps = {
+  x: number
+  y: number
+  size: number
+  color: string
+  delay?: number
+  opacity?: number
+}
+
+const GlowingOrb = ({ x, y, size, color, delay = 0, opacity = 0.1 }: GlowingOrbProps) => {
   const controls = useAnimation()
   
   useEffect(() => {

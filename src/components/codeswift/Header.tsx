@@ -4,13 +4,24 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+type NavItem = { name: string; id: string };
+
+const navItems: NavItem[] = [
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'why-us' },
+  { name: 'Services', id: 'services' },
+  { name: 'Portfolio', id: 'portfolio' },
+  { name: 'Career', id: 'leadership' },
+  { name: 'Clients', id: 'clients' },
+];
+
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
+      const isScrolled = window.scrollY > 12;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
@@ -28,101 +39,95 @@ export function Header() {
     }
   };
 
-  const navItems = [
-    { name: 'Home', id: 'home' },
-    { name: 'Services', id: 'services' },
-    { name: 'About', id: 'why-us' },
-    { name: 'Career', id: 'leadership' },
-    { name: 'Clients', id: 'clients' },
-  ];
-
   return (
-    <header
-      className={`fixed w-full z-50 px-5 sm:px-8 lg:px-10 transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/95 border-b border-white/10 shadow-[0_6px_24px_rgba(0,0,0,0.35)] py-4'
-          : 'bg-black/90 border-b border-white/5 py-5'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <div className="flex-shrink-0">
-          <Link 
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="block w-40 h-12 relative group"
-          >
-            <Image 
-              src="/images/logo.png" 
-              alt="CodeSwift" 
-              fill 
-              className="object-contain object-left group-hover:opacity-90 transition-opacity duration-300"
-              priority
-            />
-          </Link>
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-10">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="text-white/80 hover:text-white text-base font-medium tracking-normal"
-            >
-              {item.name}
-            </button>
-          ))}
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="inline-flex items-center justify-center px-7 py-2.5 text-base font-semibold rounded-full text-black bg-white hover:bg-white/90 shadow-[0_10px_30px_rgba(0,0,0,0.25)] transition-all"
-          >
-            Contact us
-          </button>
-        </nav>
-
-        {/* Mobile menu button */}
-        <button 
-          className="md:hidden text-white p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden bg-black/95 absolute top-full left-0 right-0 px-4 pt-2 pb-6">
-          <div className="flex flex-col space-y-4 py-4">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-white hover:text-purple-400 transition-colors font-medium text-left py-2 px-4"
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-3 sm:px-6 lg:px-10 pt-5 pointer-events-none">
+      <div
+        className={`w-full max-w-6xl transition-all duration-300 ${
+          scrolled ? 'translate-y-0 scale-100' : 'translate-y-1 scale-[0.995]'
+        }`}
+      >
+        <div className="bg-gradient-to-r from-white/18 via-white/8 to-white/18 p-[1.4px] rounded-full shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur pointer-events-auto">
+          <div className="relative flex items-center justify-between rounded-full bg-[#0b0b0f]/85 border border-white/8 px-5 py-2.5 sm:px-7 md:px-9">
+            <div className="flex items-center gap-3">
+              <Link
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="relative h-10 w-44 sm:w-48 flex items-center"
               >
-                {item.name}
+                <Image
+                  src="/images/logo.png"
+                  alt="CodeSwift"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-white/85 hover:text-white text-base font-medium tracking-tight transition-colors"
+                >
+                  {item.name}
+                </button>
+              ))}
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-base font-semibold text-black shadow-[0_12px_34px_rgba(0,0,0,0.35)] transition-transform hover:-translate-y-[1px]"
+              >
+                Get Quote
               </button>
-            ))}
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all mt-4"
+            </nav>
+
+            {/* Mobile menu toggle */}
+            <button
+              className="md:hidden text-white/90 hover:text-white p-2"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle navigation"
             >
-              Get Quote
+              {mobileMenuOpen ? (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
-      )}
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden mt-3 bg-[#0b0b0f]/92 border border-white/10 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur pointer-events-auto">
+            <div className="flex flex-col space-y-2 px-4 py-4">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="w-full text-left rounded-xl px-4 py-3 text-white/85 hover:text-white hover:bg-white/5 transition-colors font-medium"
+                >
+                  {item.name}
+                </button>
+              ))}
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="w-full mt-2 rounded-xl bg-white px-5 py-3 text-base font-semibold text-black shadow-[0_12px_34px_rgba(0,0,0,0.35)] hover:-translate-y-[1px] transition-transform"
+              >
+                Get Quote
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
