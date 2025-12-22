@@ -8,7 +8,7 @@ type NavItem = { name: string; id: string };
 
 const navItems: NavItem[] = [
   { name: 'Home', id: 'home' },
-  { name: 'About', id: 'why-us' },
+  { name: 'About', id: '/about' },
   { name: 'Services', id: 'services' },
   { name: 'Portfolio', id: 'portfolio' },
   { name: 'Career', id: 'leadership' },
@@ -70,13 +70,23 @@ export function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8">
               {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-white/85 hover:text-white text-base font-medium tracking-tight transition-colors"
-                >
-                  {item.name}
-                </button>
+                item.id.startsWith('/') ? (
+                  <Link
+                    key={item.id}
+                    href={item.id}
+                    className="text-white/85 hover:text-white text-base font-medium tracking-tight transition-colors px-2"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className="text-white/85 hover:text-white text-base font-medium tracking-tight transition-colors px-2"
+                  >
+                    {item.name}
+                  </button>
+                )
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
