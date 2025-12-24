@@ -55,7 +55,7 @@ export function PortfolioNew() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 md:[grid-template-columns:0.9fr_1.7fr_0.9fr] gap-8 items-end">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:[grid-template-columns:0.9fr_1.7fr_0.9fr] gap-6 sm:gap-8 items-end">
           {featured.map((project, index) => {
             return (
               <motion.article
@@ -70,10 +70,10 @@ export function PortfolioNew() {
                 }}
                 className={`
                   group relative overflow-hidden
-                  h-[560px] md:h-[580px]
-                  rounded-[36px]
+                  h-[340px] xs:h-[420px] sm:h-[480px] md:h-[560px] md:h-[580px]
+                  rounded-2xl xs:rounded-3xl md:rounded-[36px]
                   border border-white/10
-                  shadow-[0_40px_140px_rgba(0,0,0,0.85)]
+                  shadow-[0_20px_60px_rgba(0,0,0,0.45)] md:shadow-[0_40px_140px_rgba(0,0,0,0.85)]
                   isolate
                   transition-transform duration-300
                   hover:-translate-y-2
@@ -86,6 +86,7 @@ export function PortfolioNew() {
                   fill
                   priority={index === 1}
                   className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </motion.article>
             );

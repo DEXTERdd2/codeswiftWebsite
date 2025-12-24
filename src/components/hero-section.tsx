@@ -59,7 +59,7 @@ export function HeroSection() {
       </div>
       
       {/* Main content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 md:pt-40 md:pb-32 relative z-10 w-full flex-grow flex flex-col">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 pt-28 pb-14 md:pt-40 md:pb-32 relative z-10 w-full flex-grow flex flex-col">
         <div className="flex-grow flex items-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -67,24 +67,24 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
             className="w-full text-center"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 px-4">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-5 px-2 sm:px-4">
               <span className="text-white">Innovative</span>{' '}
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">Software Solutions</span>{' '}
               <span className="text-white">for the future</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto px-4">
+            <p className="text-base xs:text-lg md:text-xl text-gray-300 mb-8 max-w-xl sm:max-w-2xl mx-auto px-2 sm:px-4">
               At CodeSwift, we deliver tailored IT solutions that drive business growth. With expertise in software development, cloud services, and IT consulting.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full">
               <Link
                 href="#contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-lg text-purple-700 bg-white hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 text-base font-medium rounded-lg text-purple-700 bg-white hover:bg-gray-100 transition-colors w-full sm:w-auto"
               >
                 Contact Us
               </Link>
               <Link
                 href="#solutions"
-                className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-base font-medium rounded-lg text-white bg-purple-600/30 hover:bg-purple-700/40 transition-colors"
+                className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-base font-medium rounded-lg text-white bg-purple-600/30 hover:bg-purple-700/40 transition-colors w-full sm:w-auto"
               >
                 View All Solutions
                 <ArrowRight className="ml-2 h-4 w-4" />

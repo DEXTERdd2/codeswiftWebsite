@@ -11,8 +11,6 @@ const navItems: NavItem[] = [
   { name: 'About', id: '/about' },
   { name: 'Services', id: 'services' },
   { name: 'Portfolio', id: 'portfolio' },
-  { name: 'Career', id: 'leadership' },
-  { name: 'Clients', id: 'clients' },
 ];
 
 export function Header() {

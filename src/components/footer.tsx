@@ -31,10 +31,10 @@ export function Footer() {
 
   return (
     <footer className="bg-black text-white border-t border-neutral-900">
-      <div className="max-w-6xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
+        <div className="flex flex-col gap-10 sm:gap-12 lg:flex-row lg:items-start lg:justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center justify-center lg:justify-start mb-8 lg:mb-0">
             <Image
               src="/images/logo.png"
               alt="CodeSwift Logo"
@@ -45,7 +45,7 @@ export function Footer() {
           </div>
 
           {/* Link columns */}
-          <div className="grid grid-cols-2 gap-x-14 gap-y-10 md:grid-cols-4">
+          <div className="grid grid-cols-1 xs:grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-2 md:grid-cols-4 md:gap-x-14 md:gap-y-10 w-full">
             <div>
               <h3 className="text-sm font-semibold tracking-wide text-white mb-4">
                 Product
@@ -120,7 +120,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 text-xs text-neutral-500">
+        <div className="mt-10 sm:mt-12 text-xs text-neutral-500 text-center lg:text-left">
           &copy; {currentYear} CodeSwift. All rights reserved.
         </div>
       </div>

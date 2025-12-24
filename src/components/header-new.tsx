@@ -59,13 +59,13 @@ export function HeaderNew() {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? 'bg-gray-900/90 backdrop-blur-md shadow-lg py-2' : 'bg-transparent py-4'
     }`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Global">
-        <div className="flex items-center justify-between h-16">
+      <nav className="max-w-7xl mx-auto px-2 xs:px-3 sm:px-4 lg:px-8" aria-label="Global">
+        <div className="flex items-center justify-between h-12 xs:h-14 sm:h-16 md:h-20">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <div className="relative h-10 w-40">
+              <div className="relative h-8 w-24 xs:h-9 xs:w-28 sm:h-10 sm:w-32 md:h-10 md:w-40">
                 <Image 
-                  src="/logo.svg" 
+                  src="/images/logo-symbol.png" 
                   alt="CodeSwift Logo" 
                   fill 
                   className="object-contain object-left"
@@ -76,14 +76,14 @@ export function HeaderNew() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1 overflow-x-auto">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 {item.submenu ? (
                   <>
                     <button
                       onClick={() => toggleSubmenu(item.name)}
-                      className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                      className="text-gray-300 hover:text-white px-2 xs:px-3 py-1 xs:py-2 rounded-md text-xs xs:text-sm font-medium flex items-center"
                     >
                       {item.name}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${openSubmenu === item.name ? 'transform rotate-180' : ''}`} />
@@ -110,7 +110,7 @@ export function HeaderNew() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:text-white px-2 xs:px-3 py-1 xs:py-2 rounded-md text-xs xs:text-sm font-medium"
                   >
                     {item.name}
                   </Link>
@@ -119,14 +119,14 @@ export function HeaderNew() {
             ))}
             <Link
               href="#contact"
-              className="ml-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-purple-700 hover:to-blue-700 transition-colors"
+              className="ml-2 xs:ml-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-2 xs:px-4 py-1 xs:py-2 rounded-md text-xs xs:text-sm font-medium hover:from-purple-700 hover:to-blue-700 transition-colors"
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
@@ -134,9 +134,9 @@ export function HeaderNew() {
             >
               <span className="sr-only">Open main menu</span>
               {mobileMenuOpen ? (
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-6 w-6 xs:h-7 xs:w-7 sm:h-8 sm:w-8" aria-hidden="true" />
               ) : (
-                <Menu className="h-6 w-6" aria-hidden="true" />
+                <Menu className="h-6 w-6 xs:h-7 xs:w-7 sm:h-8 sm:w-8" aria-hidden="true" />
               )}
             </button>
           </div>
