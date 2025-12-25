@@ -105,9 +105,9 @@ export default function AboutPage() {
             We build, automate, and amplify, helping businesses move faster
             <span className="block mt-2">and communicate more effectively.</span>
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12 md:gap-20 mb-8 sm:mb-14 mt-8 sm:mt-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-8 sm:mb-14 mt-8 sm:mt-24">
             {missionCards.map((card) => (
-              <div key={card.title} className="rounded-2xl border border-white/30 bg-white/5 px-4 sm:px-8 md:px-10 py-6 sm:py-10 md:py-12 text-center flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full max-w-[95vw] sm:max-w-[480px] md:max-w-[400px] mx-auto h-auto min-h-[260px] sm:min-h-[320px] md:min-h-[420px]">
+              <div key={card.title} className="rounded-2xl border border-white/30 bg-white/5 px-2 sm:px-4 md:px-6 py-6 sm:py-8 md:py-10 text-center flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[260px] sm:min-h-[320px] md:min-h-[420px]">
                 <Image src={card.icon} alt={card.title} width={120} height={120} className="mb-3 sm:mb-4 h-16 sm:h-24 md:h-40 w-16 sm:w-24 md:w-40 object-contain drop-shadow-lg" />
                 <h3 className="text-base sm:text-lg md:text-2xl font-bold mb-1 sm:mb-2 md:mb-4 text-white">{card.title}</h3>
                 <p className="text-white/80 text-xs sm:text-sm md:text-base max-w-xs mx-auto">{card.desc}</p>
@@ -151,9 +151,9 @@ export default function AboutPage() {
           <p className="text-center text-sm sm:text-lg md:text-lg text-white/90 mb-2 sm:mb-8">
             We are committed to delivering excellence, fostering innovation, and building long-term partnerships that empower businesses to succeed.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-12 md:gap-20 mb-8 sm:mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-8 sm:mb-14">
             {coreValues.map((value) => (
-              <div key={value.title} className="rounded-2xl border border-white/20 bg-white/5 p-4 sm:p-8 text-center flex flex-col items-center shadow-lg w-full max-w-[95vw] sm:max-w-[400px] md:max-w-[400px] mx-auto h-auto min-h-[180px] sm:min-h-[320px] md:min-h-[369px]">
+              <div key={value.title} className="rounded-2xl border border-white/20 bg-white/5 p-2 sm:p-4 text-center flex flex-col items-center shadow-lg w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[180px] sm:min-h-[320px] md:min-h-[369px]">
                 <Image src={value.icon} alt={value.title} width={80} height={80} className="mb-2 sm:mb-6 h-12 sm:h-24 md:h-24 w-12 sm:w-24 md:w-24 object-contain" />
                 <h3 className="text-base sm:text-lg md:text-3xl font-extrabold mb-1 sm:mb-2">{value.title}</h3>
                 <p className="text-white/80 text-xs sm:text-base md:text-base">{value.desc}</p>
@@ -170,9 +170,9 @@ export default function AboutPage() {
           <p className="text-center text-sm sm:text-base md:text-lg text-white/90 mb-2 sm:mb-8">
             We are committed to delivering excellence, fostering innovation, and building long-term partnerships that empower businesses to succeed.
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 sm:gap-14 md:gap-28 mb-8 sm:mb-14">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-2 sm:gap-4 md:gap-6 mb-8 sm:mb-14">
             {globalPresence.map((loc, idx) => (
-              <div key={loc.label} className="rounded-2xl overflow-hidden relative shadow-lg w-full max-w-[95vw] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[750px] min-h-[180px] sm:min-h-[320px] md:min-h-[450px] aspect-[5/6] mx-auto">
+              <div key={loc.label} className="rounded-2xl overflow-hidden relative shadow-lg w-full max-w-full md:max-w-[420px] lg:max-w-[500px] min-h-[180px] sm:min-h-[320px] md:min-h-[450px] aspect-[5/6] mx-auto">
                 <Image 
                   src={loc.image} 
                   alt={loc.label} 

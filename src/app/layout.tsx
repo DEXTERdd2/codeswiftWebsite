@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Header } from "../components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           backgroundImage: "linear-gradient(180deg, #000000 0%, #200D42 36.21%, #4F21A1 68.68%, #8752FA 86.54%)",
         }}
       >
+        <Header />
         {children}
       </body>
     </html>

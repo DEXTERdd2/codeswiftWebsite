@@ -2,141 +2,125 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
+type NavItem = {
+  name: string;
+  href: string;
+  submenu?: {
+    title: string;
+    items: { name: string; href: string }[];
+  };
+};
+
+const navigation: NavItem[] = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  {
+    name: "Services",
+    href: "/services"
+  },
+];
+
 export function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const toggleSubmenu = (itemName: string) => {
+    setOpenSubmenu(openSubmenu === itemName ? null : itemName);
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-        isScrolled 
-          ? "bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-white/10" 
-          : "bg-transparent"
-      }`}
-    >
-      <div className="w-full max-w-7xl mx-auto px-1 xs:px-2 sm:px-3 md:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-12 xs:h-14 sm:h-16 md:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center min-w-0">
-            <div className="flex items-center min-w-0">
-              <div className="w-6 h-6 xs:w-7 xs:h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 mr-2 relative flex-shrink-0">
-                <Image 
-                  src="/images/logo-symbol.png" 
-                  alt="CodeSwift Logo" 
-                  width={40} 
-                  height={40}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="truncate text-base xs:text-lg sm:text-xl md:text-3xl font-bold text-white">
-                CODESWIFT
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2 xs:gap-3 sm:gap-4 md:gap-8 lg:gap-10 overflow-x-auto">
-            <Link href="/" className="text-white hover:text-purple-300 transition-colors text-xs xs:text-sm sm:text-base lg:text-lg px-0.5 xs:px-1 py-1">
-              Home
-            </Link>
-            <Link href="/services" className="text-gray-300 hover:text-white transition-colors text-xs xs:text-sm sm:text-base lg:text-lg px-0.5 xs:px-1 py-1">
-              Services
-            </Link>
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors text-xs xs:text-sm sm:text-base lg:text-lg px-0.5 xs:px-1 py-1">
-              About
-            </Link>
-            <Link href="/portfolio" className="text-gray-300 hover:text-white transition-colors text-xs xs:text-sm sm:text-base lg:text-lg px-0.5 xs:px-1 py-1">
-              Portfolio
-            </Link>
-            <Link 
-              href="/contact" 
-              className="px-1 xs:px-2 py-1.5 text-xs xs:text-sm md:text-base font-medium text-purple-700 bg-white hover:bg-gray-100 rounded-lg transition-colors"
-            >
-              Contact us
-            </Link>
-          </nav>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="text-white hover:text-purple-300 focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? (
-                <X className="h-7 w-7 xs:h-8 xs:w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" />
-              ) : (
-                <Menu className="h-7 w-7 xs:h-8 xs:w-8 sm:h-9 sm:w-9 md:h-10 md:w-10" />
-              )}
-            </button>
+    <header className="fixed w-full z-50 bg-transparent py-6">
+      <div className="max-w-6xl mx-auto rounded-2xl border border-gray-400/30 bg-[#18122B]/80 backdrop-blur-md px-6 py-2 flex items-center justify-between shadow-lg">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0 flex items-center">
+          <div className="relative h-10 w-40">
+            <Image 
+              src="/images/logo-symbol.png" 
+              alt="CodeSwift Logo" 
+              fill 
+              className="object-contain object-left"
+              priority
+            />
           </div>
+        </Link>
+        {/* Navigation + Get Quote Button (right) */}
+        <div className="hidden md:flex items-center ml-auto space-x-8">
+          <nav className="flex items-center space-x-8" aria-label="Global">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  href={item.href}
+                  className="text-white hover:text-[#8752FA] px-2 py-1 rounded-md text-lg font-medium transition-colors"
+                >
+                  {item.name}
+                </Link>
+              </div>
+            ))}
+          </nav>
+          <Link
+            href="#contact"
+            className="bg-white text-black font-semibold rounded-xl px-7 py-2 text-lg shadow hover:bg-gray-200 transition-colors border border-gray-300"
+          >
+            Get Quote
+          </Link>
+        </div>
+        {/* Mobile menu button */}
+        <div className="md:hidden flex items-center ml-2">
+          <button
+            type="button"
+            className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <span className="sr-only">Open main menu</span>
+            {mobileMenuOpen ? (
+              <X className="h-7 w-7" aria-hidden="true" />
+            ) : (
+              <Menu className="h-7 w-7" aria-hidden="true" />
+            )}
+          </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/10 w-full">
-          <div className="px-2 xs:px-3 pt-2 pb-4 space-y-1 xs:space-y-2">
-            <Link 
-              href="/" 
-              className="block px-3 xs:px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors text-sm xs:text-base sm:text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/services" 
-              className="block px-3 xs:px-4 py-3 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors text-sm xs:text-base sm:text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/about" 
-              className="block px-3 xs:px-4 py-3 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors text-sm xs:text-base sm:text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link 
-              href="/portfolio" 
-              className="block px-3 xs:px-4 py-3 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors text-sm xs:text-base sm:text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Portfolio
-            </Link>
-            <Link 
-              href="/contact" 
-              className="block px-3 xs:px-4 py-3 text-gray-300 hover:bg-gray-800 rounded-lg transition-colors text-sm xs:text-base sm:text-lg"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <button 
-              className="w-full mt-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3 rounded-lg transition-colors text-sm xs:text-base sm:text-lg"
-              onClick={() => {
-                setIsMenuOpen(false);
-                // Add your get started action here
-              }}
-            >
-              Get Started
-            </button>
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-[#18122B]/95 backdrop-blur-md rounded-2xl mx-2 mt-2 border border-gray-400/30">
+          <div className="px-4 pt-4 pb-3 space-y-1">
+            {navigation.map((item) => (
+              <div key={item.name} className="border-b border-gray-800 last:border-b-0">
+                <Link
+                  href={item.href}
+                  className="block px-3 py-3 text-base font-medium text-white hover:text-[#8752FA] hover:bg-gray-800 rounded-md"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </div>
+            ))}
+            <div className="pt-3">
+              <Link
+                href="#contact"
+                className="block w-full text-center bg-white text-black font-semibold rounded-xl px-4 py-3 text-base shadow border border-gray-300 hover:bg-gray-200 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Get Quote
+              </Link>
+            </div>
           </div>
         </div>
       )}
