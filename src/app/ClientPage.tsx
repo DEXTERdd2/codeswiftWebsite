@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-// import { Header } from "@/components/codeswift/Header";
 import { Hero } from "@/components/codeswift/Hero";
 import { Services } from "@/components/codeswift/Services";
 import { TrustedBy } from "@/components/codeswift/TrustedBy";
@@ -95,7 +94,6 @@ export default function ClientPage() {
 
       {/* Speech Bubble - Removed for now to simplify */}
       
-      {/* <Header /> */}
       <main>
         <Hero />
         <TrustedBy />
