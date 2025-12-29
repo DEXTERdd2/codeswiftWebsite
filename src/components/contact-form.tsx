@@ -50,14 +50,14 @@ export function ContactForm() {
 
   return (
     <section id="contact" className="relative overflow-hidden py-24">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0c0c12] via-[#150c2d] to-[#3c1f74]" />
+      {/* background removed to allow page background to show through */}
       <div className="absolute inset-x-0 top-0 h-64 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(119,72,255,0.08),transparent_35%)]" />
 
       <div className="relative max-w-6xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col-reverse lg:flex-row gap-8 sm:gap-10 lg:gap-12 items-start">
           {/* Form card */}
-          <div className="relative rounded-[18px] xs:rounded-[22px] md:rounded-[26px] p-[1px] bg-gradient-to-br from-white/20 via-white/12 to-white/6 shadow-[0_12px_40px_rgba(0,0,0,0.35)] md:shadow-[0_24px_80px_rgba(0,0,0,0.55)] w-full max-w-xl mx-auto lg:mx-0 order-1 lg:order-none lg:w-1/2">
-            <div className="relative rounded-[16px] xs:rounded-[20px] md:rounded-[24px] bg-[linear-gradient(180deg,rgba(24,22,36,0.9)_0%,rgba(39,25,77,0.9)_55%,rgba(20,12,33,0.92)_100%)] border border-white/10">
+          <div className="relative rounded-[18px] xs:rounded-[22px] md:rounded-[26px] p-[1px] bg-transparent shadow-none w-full max-w-xl mx-auto lg:mx-0 order-1 lg:order-none lg:w-1/2">
+            <div className="relative rounded-[16px] xs:rounded-[20px] md:rounded-[24px] bg-transparent border border-white/10">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_16%,rgba(255,255,255,0.06),transparent_32%),radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.05),transparent_30%),radial-gradient(circle_at_40%_82%,rgba(0,0,0,0.35),transparent_60%)]" />
               <div className="relative p-4 xs:p-6 md:p-8 lg:p-10 space-y-5 xs:space-y-6">
                 <div className="text-white text-xl xs:text-2xl md:text-3xl font-semibold">Get Quote Form Us</div>

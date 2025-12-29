@@ -8,6 +8,7 @@ import { WhyChooseUs } from "@/components/why-choose-us";
 import { Leadership } from "@/components/leadership";
 import { PortfolioNew } from "@/components/portfolio-new";
 import { ContactForm } from "@/components/contact-form";
+import QuoteCTA from "@/components/QuoteCTA";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Background } from "@/components/ui/background";
@@ -101,7 +102,7 @@ export default function ClientPage() {
         <WhyChooseUs />
         <PortfolioNew />
         <Leadership />
-        <ContactForm />
+        <QuoteCTA />
         <FAQ />
       </main>
       <Footer />

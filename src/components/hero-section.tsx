@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export function HeroSection() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-purple-950 to-black min-h-screen flex flex-col">
+    <div className="relative overflow-hidden bg-transparent min-h-screen flex flex-col">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Wave shape at the bottom */}

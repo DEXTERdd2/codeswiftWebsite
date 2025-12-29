@@ -58,7 +58,7 @@ export function Portfolio() {
   }
 
   return (
-    <section id="portfolio" className="py-20 bg-gray-50">
+    <section id="portfolio" className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
@@ -92,7 +92,7 @@ export function Portfolio() {
           {projects.slice(0, visibleProjects).map((project) => (
             <div
               key={project.id}
-              className="group relative overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="group relative overflow-hidden rounded-xl bg-transparent shadow-none hover:shadow-none transition-shadow duration-300"
             >
               <div className="h-64 bg-gray-100 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">

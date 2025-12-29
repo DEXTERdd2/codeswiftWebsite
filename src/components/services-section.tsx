@@ -38,10 +38,10 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+    <section className="py-20 bg-transparent relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-stripes.png')] opacity-5"></div>
+        {/* subtle pattern removed to show page background */}
         <motion.div 
           className="absolute top-1/3 -right-1/4 w-[800px] h-[800px] rounded-full bg-gradient-to-r from-purple-600/5 to-blue-600/5 blur-3xl"
           animate={{

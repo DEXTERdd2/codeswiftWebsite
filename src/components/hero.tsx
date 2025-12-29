@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900"></div>
+        <div className="absolute inset-0 bg-transparent"></div>
         
         <div className="absolute inset-0 opacity-5" style={{
           backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",

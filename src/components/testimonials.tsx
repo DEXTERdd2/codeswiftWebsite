@@ -52,7 +52,7 @@ export function Testimonials() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
@@ -67,7 +67,7 @@ export function Testimonials() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="relative bg-gray-50 rounded-2xl p-8 md:p-12 shadow-lg">
+          <div className="relative bg-transparent rounded-2xl p-8 md:p-12 shadow-none">
             <Quote className="h-12 w-12 text-blue-100 absolute -top-6 left-8" />
             
             <div className="relative z-10">

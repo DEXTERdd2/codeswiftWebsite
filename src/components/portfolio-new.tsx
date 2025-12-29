@@ -31,11 +31,9 @@ export function PortfolioNew() {
   return (
     <section
       id="portfolio"
-      className="relative overflow-hidden bg-gradient-to-b from-[#0d0617] via-[#090414] to-[#06030d] py-28"
+      className="relative overflow-hidden bg-transparent py-28"
     >
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_15%,rgba(139,92,246,0.28),transparent_45%),radial-gradient(circle_at_82%_12%,rgba(59,130,246,0.26),transparent_44%),radial-gradient(circle_at_50%_70%,rgba(244,114,182,0.18),transparent_42%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(255,255,255,0.08),transparent_38%)]" />
+      {/* Background glow removed so page background shows through */}
 
       <div className="max-w-7xl mx-auto px-6 relative">
         {/* Heading */}

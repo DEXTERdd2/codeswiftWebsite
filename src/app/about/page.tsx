@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Leadership } from "@/components/leadership";
 import { ContactForm } from "@/components/contact-form";
+import QuoteCTA from "@/components/QuoteCTA";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { main } from "framer-motion/client";
@@ -193,7 +194,7 @@ export default function AboutPage() {
 
       </main>
       <Leadership />
-      <ContactForm />
+      <QuoteCTA />
       <FAQ />
       <Footer />
     </>

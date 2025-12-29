@@ -54,12 +54,9 @@ export function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="relative overflow-hidden bg-gradient-to-b from-[#2b1955] via-[#1f1242] to-[#140a2d] py-20 text-white"
+      className="relative overflow-hidden bg-transparent py-20 text-white"
     >
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(139,92,246,0.18),transparent_40%),radial-gradient(circle_at_85%_12%,rgba(96,165,250,0.18),transparent_42%),radial-gradient(circle_at_50%_75%,rgba(129,140,248,0.2),transparent_45%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.04),transparent_60%)]" />
-      </div>
+      {/* background decoration removed to let page background show through */}
 
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10 relative z-10">
         <div className="grid items-start gap-6 lg:grid-cols-[1.1fr_1fr] mb-12">
@@ -102,9 +99,7 @@ export function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
             >
-              <div className="absolute inset-0 bg-[url('/images/Rectangle.png')] bg-cover bg-center opacity-[0.2]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_18%,rgba(255,255,255,0.05),transparent_38%),radial-gradient(circle_at_80%_14%,rgba(255,255,255,0.04),transparent_36%),radial-gradient(circle_at_50%_85%,rgba(255,255,255,0.03),transparent_42%)]" />
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.05),transparent),linear-gradient(0deg,rgba(255,255,255,0.035),transparent_35%)]" />
+                    {/* decorative overlays removed to allow page background through */}
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-start justify-start">
                   <div className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 flex items-center justify-center">
@@ -125,7 +120,7 @@ export function WhyChooseUs() {
         </div>
 
         <motion.div
-          className="rounded-3xl border border-white/16 bg-white/6 px-3 xs:px-4 sm:px-8 md:px-12 py-7 sm:py-9 shadow-[0_28px_90px_rgba(0,0,0,0.6)] backdrop-blur-xl"
+          className="rounded-3xl border border-white/16 bg-transparent px-3 xs:px-4 sm:px-8 md:px-12 py-7 sm:py-9 shadow-none"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

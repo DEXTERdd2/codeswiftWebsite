@@ -33,7 +33,7 @@ const services = [
 
 export function ServicesNew() {
   return (
-    <section className="py-20 bg-gray-900">
+    <section className="py-20 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
@@ -62,7 +62,7 @@ export function ServicesNew() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-transparent backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-900/30 to-purple-500/20 flex items-center justify-center mb-6 group-hover:from-purple-600/30 group-hover:to-blue-600/30 transition-colors">
                 {service.icon}
