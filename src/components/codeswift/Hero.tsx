@@ -4,33 +4,34 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-black pt-28 pb-24 flex items-center justify-center min-h-[760px]"
+      className="relative isolate overflow-hidden bg-transparent pt-28 pb-24 flex items-center justify-center min-h-[760px]"
     >
       {/* Layered gradients to mirror the Figma hero */}
       {/* Top background using provided Figma gradient */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(180deg, #000000 0%, #200D42 36.21%, #4F21A1 68.68%, #8752FA 86.54%)",
+            "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(32,13,66,0.16) 36.21%, rgba(79,33,161,0.12) 68.68%, rgba(135,82,250,0.12) 86.54%)",
         }}
       />
 
       {/* Bottom arc / horizon (simple black ellipse over purple gradient) */}
-      <div className="absolute inset-x-[-18%] bottom-[-12%] h-[520px] bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,1)_0%,_rgba(0,0,0,0.96)_32%,_rgba(0,0,0,0.75)_60%,_transparent_90%)]" />
-      <div className="absolute inset-x-[-10%] bottom-[4%] h-[68px] bg-[radial-gradient(ellipse_at_bottom,_rgba(255,255,255,0.55)_0%,_transparent_80%)] opacity-70" />
+      <div className="absolute inset-x-[-18%] bottom-[-12%] h-[520px] bg-[radial-gradient(ellipse_at_bottom,_rgba(0,0,0,0.7)_0%,_rgba(0,0,0,0.45)_32%,_rgba(0,0,0,0.25)_60%,_transparent_90%)] pointer-events-none" />
+      <div className="absolute inset-x-[-10%] bottom-[4%] h-[68px] bg-[radial-gradient(ellipse_at_bottom,_rgba(255,255,255,0.55)_0%,_transparent_80%)] opacity-70 pointer-events-none" />
+
 
       {/* Floating 3D assets */}
-      <div className="absolute left-2 md:left-10 top-[60%] -translate-y-1/2 w-36 h-36 md:w-52 md:h-52">
+      <div className="absolute left-2 md:left-10 top-[80%] -translate-y-1/2 w-44 h-44 md:w-64 md:h-64">
         <Image
           src="/images/cursor.png"
           alt="Decorative arrow"
           fill
-          className="object-contain drop-shadow-[0_26px_80px_rgba(130,104,255,0.5)] animate-float"
+          className="object-contain drop-shadow-[0_30px_90px_rgba(130,104,255,0.55)] animate-float"
           priority
         />
       </div>
-      <div className="absolute right-[-10px] md:right-4 top-[60%] -translate-y-1/2 w-44 h-44 md:w-64 md:h-64">
+      <div className="absolute right-[-10px] md:right-4 top-[80%] -translate-y-1/2 w-44 h-44 md:w-64 md:h-64">
         <Image
           src="/images/message1.png"
           alt="Decorative bubble"

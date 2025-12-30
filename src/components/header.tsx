@@ -163,16 +163,16 @@ export function Header() {
                         <div className="mb-8">
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Development</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/web-development" className="hover:text-white transition-colors break-words whitespace-normal">Web Development</Link></li>
-                            <li><Link href="/services/mobile-app-development" className="hover:text-white transition-colors break-words whitespace-normal">Mobile App Development</Link></li>
-                            <li><Link href="/services/custom-crm" className="hover:text-white transition-colors break-words whitespace-normal">Custom CRM</Link></li>
-                            <li><Link href="/services/enterprise-software" className="hover:text-white transition-colors break-words whitespace-normal">Enterprise Software</Link></li>
+                            <li><Link href="/services/web-development" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Web Development</Link></li>
+                            <li><Link href="/services/mobile-app-development" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Mobile App Development</Link></li>
+                            <li><Link href="/services/custom-crm" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Custom CRM</Link></li>
+                            <li><Link href="/services/enterprise-software" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Enterprise Software</Link></li>
                           </ul>
                         </div>
                         <div>
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Design</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/digital-product-design" className="hover:text-white transition-colors break-words whitespace-normal">Digital Product Design</Link></li>
+                            <li><Link href="/services/digital-product-design" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Digital Product Design</Link></li>
                           </ul>
                         </div>
                       </div>
@@ -181,19 +181,19 @@ export function Header() {
                         <div className="mb-8">
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Game Development</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/mobile-game-development" className="hover:text-white transition-colors break-words whitespace-normal">Mobile Game Development</Link></li>
-                            <li><Link href="/services/virtual-reality" className="hover:text-white transition-colors break-words whitespace-normal">Virtual Reality (VR)</Link></li>
-                            <li><Link href="/services/augmented-reality" className="hover:text-white transition-colors break-words whitespace-normal">Augmented Reality (AR)</Link></li>
-                            <li><Link href="/services/game-design-prototyping" className="hover:text-white transition-colors break-words whitespace-normal">Game Design & Prototyping</Link></li>
+                            <li><Link href="/services/mobile-game-development" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Mobile Game Development</Link></li>
+                            <li><Link href="/services/virtual-reality" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Virtual Reality (VR)</Link></li>
+                            <li><Link href="/services/augmented-reality" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Augmented Reality (AR)</Link></li>
+                            <li><Link href="/services/game-design-prototyping" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Game Design & Prototyping</Link></li>
                           </ul>
                         </div>
                         <div>
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Quality Assurance</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/manual-testing" className="hover:text-white transition-colors break-words whitespace-normal">Manual Testing</Link></li>
-                            <li><Link href="/services/automated-testing" className="hover:text-white transition-colors break-words whitespace-normal">Automated Testing</Link></li>
-                            <li><Link href="/services/performance-testing" className="hover:text-white transition-colors break-words whitespace-normal">Performance Testing</Link></li>
-                            <li><Link href="/services/security-testing" className="hover:text-white transition-colors break-words whitespace-normal">Security Testing</Link></li>
+                            <li><Link href="/services/manual-testing" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Manual Testing</Link></li>
+                            <li><Link href="/services/automated-testing" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Automated Testing</Link></li>
+                            <li><Link href="/services/performance-testing" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Performance Testing</Link></li>
+                            <li><Link href="/services/security-testing" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Security Testing</Link></li>
                           </ul>
                         </div>
                       </div>
@@ -203,10 +203,10 @@ export function Header() {
                         <div>
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Digital Marketing</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/seo" className="hover:text-white transition-colors break-words whitespace-normal">Search Engine Optimization (SEO)</Link></li>
-                            <li><Link href="/services/social-media-marketing" className="hover:text-white transition-colors break-words whitespace-normal">Social Media Marketing</Link></li>
-                            <li><Link href="/services/digital-analytics" className="hover:text-white transition-colors break-words whitespace-normal">Digital Analytics & Reporting</Link></li>
-                            <li><Link href="/services/motion-graphics" className="hover:text-white transition-colors break-words whitespace-normal">Motion Graphics</Link></li>
+                            <li><Link href="/services/seo" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Search Engine Optimization (SEO)</Link></li>
+                            <li><Link href="/services/social-media-marketing" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Social Media Marketing</Link></li>
+                            <li><Link href="/services/digital-analytics" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Digital Analytics & Reporting</Link></li>
+                            <li><Link href="/services/motion-graphics" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Motion Graphics</Link></li>
                           </ul>
                         </div>
                       </div>
@@ -216,10 +216,10 @@ export function Header() {
                         <div>
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Products</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/ai-chatbots" className="hover:text-white transition-colors break-words whitespace-normal">AI–Powered Chatbots</Link></li>
-                            <li><Link href="/services/machine-learning" className="hover:text-white transition-colors break-words whitespace-normal">Machine Learning</Link></li>
-                            <li><Link href="/services/nlp" className="hover:text-white transition-colors break-words whitespace-normal">Natural Language Processing</Link></li>
-                            <li><Link href="/services/ai-healthcare" className="hover:text-white transition-colors break-words whitespace-normal">AI In Healthcare</Link></li>
+                            <li><Link href="/services/ai-chatbots" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>AI–Powered Chatbots</Link></li>
+                            <li><Link href="/services/machine-learning" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Machine Learning</Link></li>
+                            <li><Link href="/services/nlp" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Natural Language Processing</Link></li>
+                            <li><Link href="/services/ai-healthcare" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>AI In Healthcare</Link></li>
                           </ul>
                         </div>
                       </div>
@@ -229,10 +229,10 @@ export function Header() {
                         <div>
                           <span className="text-white font-semibold flex items-center mb-2 text-xs"><span className="mr-2">→</span>Solutions</span>
                           <ul className="text-gray-300 text-xs mt-1 space-y-2">
-                            <li><Link href="/services/ci-cd" className="hover:text-white transition-colors break-words whitespace-normal">CI/CD Pipeline Automation</Link></li>
-                            <li><Link href="/services/cloud-infrastructure" className="hover:text-white transition-colors break-words whitespace-normal">Cloud Infrastructure Management</Link></li>
-                            <li><Link href="/services/disaster-recovery" className="hover:text-white transition-colors break-words whitespace-normal">Disaster Recovery & Backup</Link></li>
-                            <li><Link href="/services/devsecops" className="hover:text-white transition-colors break-words whitespace-normal">Security Integration (DevSecOps)</Link></li>
+                            <li><Link href="/services/ci-cd" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>CI/CD Pipeline Automation</Link></li>
+                            <li><Link href="/services/cloud-infrastructure" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Cloud Infrastructure Management</Link></li>
+                            <li><Link href="/services/disaster-recovery" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Disaster Recovery & Backup</Link></li>
+                            <li><Link href="/services/devsecops" className="hover:text-white transition-colors break-words whitespace-normal" onClick={() => setServicesHover(false)}>Security Integration (DevSecOps)</Link></li>
                           </ul>
                         </div>
                       </div>
