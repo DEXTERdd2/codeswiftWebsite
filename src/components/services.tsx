@@ -50,14 +50,22 @@ export function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.slice(0, 3).map((service, index) => (
               <div 
-                key={index} 
-                className="bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2"
+                key={index}
+                className="relative bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                {/* Card background image */}
+                <div className="absolute inset-0 -z-10">
+                  <img
+                    src="/images/Rectangle.png"
+                    alt="Card background"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6 relative z-10">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-400">{service.description}</p>
+                <h3 className="text-xl font-semibold mb-3 relative z-10">{service.title}</h3>
+                <p className="text-gray-400 relative z-10">{service.description}</p>
               </div>
             ))}
           </div>
@@ -65,14 +73,22 @@ export function Services() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.slice(3, 6).map((service, index) => (
               <div 
-                key={index} 
-                className="bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2"
+                key={index}
+                className="relative bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 overflow-hidden"
               >
-                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                {/* Card background image */}
+                <div className="absolute inset-0 -z-10">
+                  <img
+                    src="/images/Rectangle.png"
+                    alt="Card background"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6 relative z-10">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-gray-400">{service.description}</p>
+                <h3 className="text-xl font-semibold mb-3 relative z-10">{service.title}</h3>
+                <p className="text-gray-400 relative z-10">{service.description}</p>
               </div>
             ))}
           </div>

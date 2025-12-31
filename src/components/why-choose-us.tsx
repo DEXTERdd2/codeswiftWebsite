@@ -89,7 +89,7 @@ export function WhyChooseUs() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6 md:gap-7 mb-14 justify-items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-7 mb-14 justify-items-center">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
@@ -99,7 +99,14 @@ export function WhyChooseUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
             >
-                    {/* decorative overlays removed to allow page background through */}
+              {/* Card background image */}
+              <div className="absolute inset-0 -z-10">
+                <img
+                  src="/images/Rectangle.png"
+                  alt="Card background"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-start justify-start">
                   <div className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 flex items-center justify-center">
