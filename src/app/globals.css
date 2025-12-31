@@ -87,3 +87,31 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-dark);
 }
+
+/* About page styles moved from styled-jsx to globals.css to avoid hydration mismatches */
+.about-bg { object-position: center 160px; }
+@media (max-width: 1024px) { .about-bg { object-position: center 110px; } }
+@media (max-width: 640px) { .about-bg { object-position: center 70px; } }
+
+/* Force transparency for common background utility classes inside about page */
+.about-page .bg-white\/5,
+.about-page .bg-white\/10,
+.about-page .bg-gradient-to-b { background: transparent !important; }
+
+/* Leadership scroll buttons contrast and sizing */
+.about-page button[aria-label="Scroll left"],
+.about-page button[aria-label="Scroll right"] {
+  background: rgba(143,111,255,0.12) !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: #ffffff !important;
+  width: 44px !important;
+  height: 44px !important;
+}
+
+/* Footer border slightly lighter on about page */
+.about-page footer,
+.about-page footer > div { border-top-color: rgba(255,255,255,0.06) !important; }
+
+/* Slightly stronger shadows and backdrop blur for cards to improve legibility */
+.about-page .shadow-xl, .about-page .shadow-lg { box-shadow: 0 12px 48px rgba(0,0,0,0.55) !important; }
+.about-page .rounded-2xl { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }

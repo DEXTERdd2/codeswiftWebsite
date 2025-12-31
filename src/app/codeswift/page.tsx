@@ -8,7 +8,7 @@ import { WhyChooseUs } from '@/components/why-choose-us';
 
 export default function CodeSwiftPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-black text-white">
+    <div className="min-h-screen overflow-x-hidden bg-transparent text-white">
       <Header />
       <main>
         <Hero />

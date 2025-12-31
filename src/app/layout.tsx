@@ -26,7 +26,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased text-white min-h-screen`}
         style={{
-          backgroundImage: "linear-gradient(180deg, #000000 0%, #200D42 36.21%, #4F21A1 68.68%, #8752FA 86.54%)",
+          backgroundImage: `linear-gradient(180deg, #000000 0%, #200D42 36.21%, #4F21A1 68.68%, #8752FA 86.54%)`,
         }}
       >
         <Header />

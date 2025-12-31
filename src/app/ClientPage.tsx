@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Hero } from "@/components/codeswift/Hero";
 import { Services } from "@/components/codeswift/Services";
@@ -11,7 +12,6 @@ import { ContactForm } from "@/components/contact-form";
 import QuoteCTA from "@/components/QuoteCTA";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
-import { Background } from "@/components/ui/background";
 
 export default function ClientPage() {
   const [isMounted, setIsMounted] = useState(false);
@@ -70,8 +70,24 @@ export default function ClientPage() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden text-white relative bg-black">
-      <Background />
+    <div className="min-h-screen overflow-x-hidden text-white relative bg-transparent" style={{
+      background: 'transparent',
+    }}>
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/HomePageBackground.jpg"
+          alt="Home background"
+          fill
+          priority
+          className="object-cover hero-bg"
+          style={{ objectPosition: 'center 90px' }}
+        />
+      </div>
+
+      {/* Subtle overlay for contrast (above image, behind page content) */}
+      <div className="absolute inset-0 z-[-9] pointer-events-none" aria-hidden="true">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
+      </div>
 
       {/* Custom Cursor */}
       <div 
@@ -97,6 +113,7 @@ export default function ClientPage() {
       
       <main>
         <Hero />
+        <div className="mt-36" />
         <TrustedBy />
         <Services />
         <WhyChooseUs />
@@ -146,6 +163,30 @@ export default function ClientPage() {
         ::-webkit-scrollbar-thumb {
           background: #B48CDE;
           border-radius: 4px;
+        }
+
+        /* Background image object-position adjustments for different sizes (moved down) */
+        .hero-bg {
+          object-position: center 190px;
+        }
+
+        /* Laptop widths: move image down a bit */
+        @media (min-width: 1025px) and (max-width: 1440px) {
+          .hero-bg {
+            object-position: center 180px;
+          }
+        }
+
+        @media (max-width: 1024px) {
+          .hero-bg {
+            object-position: center 190px;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .hero-bg {
+            object-position: center 130px;
+          }
         }
       `}</style>
     </div>

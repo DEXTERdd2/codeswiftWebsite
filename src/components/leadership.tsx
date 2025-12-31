@@ -11,6 +11,7 @@ const teamMembers = [
   {
     name: "Azeem Khalid",
     role: "Chief Executive Officer",
+    image: "/images/Azeem.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
       { icon: <Twitter className="w-4 h-4" />, url: "#" },
@@ -20,6 +21,7 @@ const teamMembers = [
   {
     name: "Faizan Shahid",
     role: "Chief Technology Officer",
+    image: "/images/Faizan.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
       { icon: <Twitter className="w-4 h-4" />, url: "#" },
@@ -29,6 +31,7 @@ const teamMembers = [
   {
     name: "Nadir Khan",
     role: "Lead Developer",
+    image: "/images/Nadir.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
       { icon: <Twitter className="w-4 h-4" />, url: "#" },
@@ -38,6 +41,7 @@ const teamMembers = [
   {
     name: "Noman Ikram",
     role: "Chief operating officer",
+    image: "/images/Noman.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
       { icon: <Twitter className="w-4 h-4" />, url: "#" },
@@ -82,12 +86,19 @@ export function Leadership() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
                   viewport={{ once: true }}
-                  className="relative flex h-[340px] xs:h-[420px] sm:h-[480px] md:h-[560px] min-w-[240px] xs:min-w-[300px] sm:min-w-[340px] md:min-w-[420px] flex-col justify-between overflow-hidden rounded-2xl xs:rounded-3xl md:rounded-[28px] border border-white/10 bg-[#0b0813] shadow-[0_10px_30px_rgba(0,0,0,0.25)] md:shadow-[0_20px_70px_rgba(0,0,0,0.5)] snap-center"
+                  className="relative flex h-[340px] xs:h-[420px] sm:h-[480px] md:h-[560px] min-w-[240px] xs:min-w-[300px] sm:min-w-[340px] md:min-w-[420px] flex-col justify-end overflow-hidden rounded-2xl xs:rounded-3xl md:rounded-[28px] border border-white/10 bg-transparent shadow-[0_10px_30px_rgba(0,0,0,0.18)] md:shadow-[0_20px_70px_rgba(0,0,0,0.35)] snap-center"
                 >
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,#5b2fa3_0%,#1c1230_45%,#05030a_100%)]" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_15%,rgba(255,255,255,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.06),transparent_32%)]" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(135,82,250,0.12),transparent_55%)]" />
-                  <div className="relative flex flex-col h-full px-4 xs:px-6 sm:px-7 pb-6 xs:pb-8 pt-4 xs:pt-6">
+                  {/* Full Card Background Image */}
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover z-0"
+                    style={{ objectPosition: 'top' }}
+                  />
+                  {/* Gradient Overlay for readability */}
+                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />
+                  {/* Card Content Overlay */}
+                  <div className="relative z-20 flex flex-col h-full justify-end px-4 xs:px-6 sm:px-7 pb-6 xs:pb-8 pt-4 xs:pt-6">
                     <div className="flex-1" />
                     <div className="border-t border-white/25 pt-4 xs:pt-5 flex items-end justify-between gap-4">
                       <div>

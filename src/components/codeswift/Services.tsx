@@ -35,11 +35,8 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="relative overflow-hidden bg-[#0A0A0C] py-20 text-white">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0D] via-[#0B0A10] to-[#08060C]" />
-        <div className="absolute inset-x-0 bottom-[-28%] h-[520px] bg-[radial-gradient(circle_at_bottom,_rgba(62,27,102,0.75),_rgba(16,8,28,0.4)_46%,_transparent_72%)]" />
-      </div>
+    <section id="services" className="relative overflow-hidden bg-transparent py-20 text-white">
+      {/* Decorations removed so page background shows through */}
 
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10 relative z-10">
         <motion.div
@@ -59,7 +56,7 @@ export function Services() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="group rounded-2xl border border-[#29292F] bg-[#111114] px-8 py-10 shadow-[0_24px_70px_rgba(0,0,0,0.45)] transition-transform duration-200 hover:-translate-y-2"
+              className="group rounded-2xl border border-[#29292F] bg-transparent px-8 py-10 shadow-[0_24px_70px_rgba(0,0,0,0.25)] transition-transform duration-200 hover:-translate-y-2"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

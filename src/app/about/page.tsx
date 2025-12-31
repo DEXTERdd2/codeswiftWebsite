@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Leadership } from "@/components/leadership";
 import { ContactForm } from "@/components/contact-form";
@@ -77,8 +76,24 @@ const globalPresence = [
 export default function AboutPage() {
   return (
     <>
-     
-      <main className="min-h-screen bg-gradient-to-b from-[#0c0c12] via-[#150c2d] to-[#3c1f74] text-white py-16 md:py-24">
+      <div className="relative min-h-screen" style={{
+        backgroundImage: "url('/images/AboutUsBackground.png')",
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center 160px'
+      }}>
+
+        <div className="absolute inset-0 -z-10" aria-hidden="true" />
+
+        <div className="absolute inset-0 z-[-9] pointer-events-none" aria-hidden="true">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
+        </div>
+
+      <main className="relative z-20 min-h-screen bg-transparent text-white py-16 md:py-24 about-page">
+        {/* Subtle overlay for contrast (above image, inside main) */}
+        <div className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30" />
+        </div>
         <div className="max-w-6xl mx-auto px-2 sm:px-4">
           <div className="text-center">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-8 text-white mt-20 md:mt-24">About Us</h2>
@@ -108,7 +123,7 @@ export default function AboutPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-8 sm:mb-14 mt-8 sm:mt-24">
             {missionCards.map((card) => (
-              <div key={card.title} className="rounded-2xl border border-white/30 bg-white/5 px-2 sm:px-4 md:px-6 py-6 sm:py-8 md:py-10 text-center flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[260px] sm:min-h-[320px] md:min-h-[420px]">
+              <div key={card.title} className="rounded-2xl border border-white/30 bg-transparent px-2 sm:px-4 md:px-6 py-6 sm:py-8 md:py-10 text-center flex flex-col items-center shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[260px] sm:min-h-[320px] md:min-h-[420px]">
                 <Image src={card.icon} alt={card.title} width={120} height={120} className="mb-3 sm:mb-4 h-16 sm:h-24 md:h-40 w-16 sm:w-24 md:w-40 object-contain drop-shadow-lg" />
                 <h3 className="text-base sm:text-lg md:text-2xl font-bold mb-1 sm:mb-2 md:mb-4 text-white">{card.title}</h3>
                 <p className="text-white/80 text-xs sm:text-sm md:text-base max-w-xs mx-auto">{card.desc}</p>
@@ -126,7 +141,7 @@ export default function AboutPage() {
             To empower businesses worldwide through smart, adaptive digital<br />
             and AI solutions, as a trusted global partner
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 sm:gap-12 md:gap-20 mb-8 sm:mb-14 rounded-2xl border border-white/30 bg-white/10 overflow-hidden px-4 sm:px-8 py-4 sm:py-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 sm:gap-12 md:gap-20 mb-8 sm:mb-14 rounded-2xl border border-white/30 bg-transparent overflow-hidden px-4 sm:px-8 py-4 sm:py-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             {visionStats.map((stat, idx) => (
               <div key={stat.label} className="flex flex-row items-stretch w-full">
                 <div className="flex-1 flex flex-col items-center justify-center px-2 sm:px-6 md:px-10 py-4 sm:py-8 md:py-14 text-center">
@@ -154,7 +169,7 @@ export default function AboutPage() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-8 sm:mb-14">
             {coreValues.map((value) => (
-              <div key={value.title} className="rounded-2xl border border-white/20 bg-white/5 p-2 sm:p-4 text-center flex flex-col items-center shadow-lg w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[180px] sm:min-h-[320px] md:min-h-[369px]">
+              <div key={value.title} className="rounded-2xl border border-white/20 bg-transparent p-2 sm:p-4 text-center flex flex-col items-center shadow-lg w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[180px] sm:min-h-[320px] md:min-h-[369px]">
                 <Image src={value.icon} alt={value.title} width={80} height={80} className="mb-2 sm:mb-6 h-12 sm:h-24 md:h-24 w-12 sm:w-24 md:w-24 object-contain" />
                 <h3 className="text-base sm:text-lg md:text-3xl font-extrabold mb-1 sm:mb-2">{value.title}</h3>
                 <p className="text-white/80 text-xs sm:text-base md:text-base">{value.desc}</p>
@@ -197,6 +212,10 @@ export default function AboutPage() {
       <QuoteCTA />
       <FAQ />
       <Footer />
+      
+      {/* About page styles moved to global CSS (src/app/globals.css) to avoid hydration mismatches */}
+
+      </div>
     </>
   );
 }

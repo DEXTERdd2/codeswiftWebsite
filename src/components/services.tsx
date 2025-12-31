@@ -46,19 +46,36 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
-                {service.icon}
+        <div className="flex flex-col">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.slice(0, 3).map((service, index) => (
+              <div 
+                key={index} 
+                className="bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-400">{service.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-400">{service.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="mt-16" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.slice(3, 6).map((service, index) => (
+              <div 
+                key={index} 
+                className="bg-transparent p-8 rounded-xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-400">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

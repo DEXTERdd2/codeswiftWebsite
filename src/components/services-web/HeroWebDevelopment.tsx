@@ -7,7 +7,7 @@ const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400','500','700'], displa
 
 export function HeroWebDevelopment() {
   return (
-    <header className="relative pt-44 pb-12 overflow-hidden bg-black">
+    <header className="relative pt-44 pb-12 overflow-hidden bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <p className={`${dmSans.className} text-[36px] font-medium text-white/70 uppercase tracking-wider mb-12 sm:mb-2`} style={{ letterSpacing: '-0.075em' }}>Services</p>
