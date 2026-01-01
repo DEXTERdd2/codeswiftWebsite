@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Linkedin, Twitter, Github } from "lucide-react";
 
 
@@ -89,11 +90,14 @@ export function Leadership() {
                   className="relative flex h-[340px] xs:h-[420px] sm:h-[480px] md:h-[560px] min-w-[240px] xs:min-w-[300px] sm:min-w-[340px] md:min-w-[420px] flex-col justify-end overflow-hidden rounded-2xl xs:rounded-3xl md:rounded-[28px] border border-white/10 bg-transparent shadow-[0_10px_30px_rgba(0,0,0,0.18)] md:shadow-[0_20px_70px_rgba(0,0,0,0.35)] snap-center"
                 >
                   {/* Full Card Background Image */}
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
+                    fill
                     className="absolute inset-0 w-full h-full object-cover z-0"
                     style={{ objectPosition: 'top' }}
+                    loading="lazy"
+                    priority={false}
                   />
                   {/* Gradient Overlay for readability */}
                   <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/90 via-black/60 to-transparent" />

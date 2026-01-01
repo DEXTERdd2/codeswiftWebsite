@@ -78,9 +78,11 @@ export default function ClientPage() {
           src="/images/HomePageBackground.jpg"
           alt="Home background"
           fill
-          priority
           className="object-cover hero-bg"
           style={{ objectPosition: 'center 90px' }}
+          loading="lazy"
+          priority={false}
+          sizes="100vw"
         />
       </div>
 

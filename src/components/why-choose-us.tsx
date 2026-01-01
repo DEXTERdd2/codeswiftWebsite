@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   {
@@ -93,7 +94,7 @@ export function WhyChooseUs() {
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="relative flex h-[320px] xs:h-[350px] sm:h-[370px] md:h-[400px] lg:h-[420px] w-full max-w-[340px] xs:max-w-[260px] sm:max-w-[220px] md:max-w-[250px] lg:max-w-[235px] flex-col justify-between overflow-hidden rounded-[15px] border border-transparent [background:linear-gradient(#2b0f65,#1a0d43)_padding-box,linear-gradient(180deg,#8752fa,rgba(255,255,255,0))_border-box] px-4 xs:px-5 sm:px-6 py-6 xs:py-7 sm:py-8 shadow-[2px_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[100px] transition-transform duration-200 hover:-translate-y-1.5"
+              className="relative flex h-[320px] xs:h-[350px] sm:h-[370px] md:h-[400px] lg:h-[420px] w-full flex-col justify-between overflow-hidden rounded-[15px] border border-transparent [background:linear-gradient(#2b0f65,#1a0d43)_padding-box,linear-gradient(180deg,#8752fa,rgba(255,255,255,0))_border-box] px-4 xs:px-5 sm:px-6 py-6 xs:py-7 sm:py-8 shadow-[2px_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[100px] transition-transform duration-200 hover:-translate-y-1.5"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -101,16 +102,20 @@ export function WhyChooseUs() {
             >
               {/* Card background image */}
               <div className="absolute inset-0 -z-10">
-                <img
+                <Image
                   src="/images/Rectangle.png"
                   alt="Card background"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  priority={false}
                 />
               </div>
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-start justify-start">
                   <div className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 flex items-center justify-center">
-                    <img src={feature.iconSrc} alt={feature.title} className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 object-contain" />
+                    <Image src={feature.iconSrc} alt={feature.title} width={96} height={96} className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 object-contain" loading="lazy" />
                   </div>
                 </div>
                 <div className="mt-auto space-y-2 xs:space-y-3 pt-6 xs:pt-10">

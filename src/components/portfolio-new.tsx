@@ -82,9 +82,10 @@ export function PortfolioNew() {
                   src={project.image}
                   alt="Featured project"
                   fill
-                  priority={index === 1}
                   className="object-cover"
+                  loading="lazy"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={false}
                 />
               </motion.article>
             );
