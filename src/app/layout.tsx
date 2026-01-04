@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preload" as="image" href="/images/AboutUsBackground.png" />
+      </head>
       <body
         className={`${inter.className} antialiased text-white min-h-screen`}
         style={{

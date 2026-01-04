@@ -75,13 +75,13 @@ export default function ClientPage() {
     }}>
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/HomePageBackground.jpg"
+          src="/images/HomePageBackground.webp"
           alt="Home background"
           fill
           className="object-cover hero-bg"
           style={{ objectPosition: 'center 90px' }}
-          loading="lazy"
-          priority={false}
+          loading="eager"
+          priority={true}
           sizes="100vw"
         />
       </div>
