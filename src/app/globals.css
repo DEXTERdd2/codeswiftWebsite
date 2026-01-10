@@ -113,5 +113,37 @@
 .about-page footer > div { border-top-color: rgba(255,255,255,0.06) !important; }
 
 /* Slightly stronger shadows and backdrop blur for cards to improve legibility */
-.about-page .shadow-xl, .about-page .shadow-lg { box-shadow: 0 12px 48px rgba(0,0,0,0.55) !important; }
+.about-page .shadow-xl, .about-page .shadow-lg { box-shadow: none !important; }
 .about-page .rounded-2xl { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+
+/* Remove all component shadows and drop-shadows globally */
+* {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+/* Exception: allow header wrapper to show a soft shadow and subtle border to match Figma */
+.header-wrapper {
+  box-shadow: 0 18px 60px rgba(0,0,0,0.45) !important;
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.header-expanded {
+  box-shadow: none !important;
+  border: none !important;
+  transform: none !important;
+}
+
+/* Site gradient utility (uses the 4 brand colors; black at top, center, and end) */
+.bg-site-gradient {
+  /* central dark vignette to add a subtle black center */
+  background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0) 40%), radial-gradient(600px 280px at 15% 18%, rgba(143,111,255,0.06), transparent 18%), linear-gradient(180deg, #000000 0%, #07060a 4%, #200D42 10%, #4F21A1 55%, #8752FA 85%, #07060a 96%, #000000 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: local;
+}
+
+ 

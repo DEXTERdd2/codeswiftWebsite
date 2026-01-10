@@ -141,7 +141,7 @@ export function ContactForm() {
                   <div className="pt-2 flex justify-start">
                     <button
                       type="submit"
-                      className="min-w-[120px] xs:min-w-[140px] rounded-lg bg-[#6e46ff] px-5 xs:px-6 py-3 text-base font-semibold text-white shadow-[0_10px_30px_rgba(0,0,0,0.25)] xs:shadow-[0_18px_60px_rgba(0,0,0,0.45)] transition-transform hover:-translate-y-[1px]"
+                      className="min-w-[120px] xs:min-w-[140px] rounded-lg bg-[#6e46ff] px-5 xs:px-6 py-3 text-base font-semibold text-white transition-transform hover:-translate-y-[1px]"
                     >
                       <div className="flex items-center justify-center gap-2">
                         <Send className="w-4 h-4" />
@@ -177,7 +177,7 @@ export function ContactForm() {
                   alt="Colorful cube"
                   fill
                   sizes="(min-width: 1024px) 300px, 45vw"
-                  className="object-contain drop-shadow-[0_25px_55px_rgba(0,0,0,0.45)]"
+                  className="object-contain"
                   priority
                 />
               </div>

@@ -35,7 +35,7 @@ export function FAQ() {
   };
 
   return (
-    <section className="pt-72 pb-20 bg-transparent">
+    <section className="pt-20 pb-20 bg-transparent">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white">Frequently asked questions</h2>

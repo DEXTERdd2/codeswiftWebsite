@@ -94,7 +94,7 @@ export function Testimonials() {
                 onClick={prevTestimonial}
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-white shadow-md hover:bg-gray-50"
+                className="rounded-full bg-white hover:bg-gray-50"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="h-5 w-5" />
@@ -103,7 +103,7 @@ export function Testimonials() {
                 onClick={nextTestimonial}
                 variant="outline"
                 size="icon"
-                className="rounded-full bg-white shadow-md hover:bg-gray-50"
+                className="rounded-full bg-white hover:bg-gray-50"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="h-5 w-5" />

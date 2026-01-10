@@ -4,31 +4,31 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-transparent pt-32 sm:pt-40 md:pt-48 lg:pt-56 pb-24 sm:pb-36 md:pb-44 lg:pb-56 flex items-center justify-center min-h-[760px]"
+      className="relative isolate overflow-hidden bg-transparent pt-32 sm:pt-32 md:pt-40 lg:pt-48 pb-12 sm:pb-36 md:pb-48 lg:pb-56 flex items-center justify-center min-h-[420px] sm:min-h-[520px] overflow-hidden"
     >
 
       {/* Floating 3D assets */}
-      <div className="absolute left-2 md:left-10 top-[85%] -translate-y-1/2 w-44 h-44 md:w-64 md:h-64 z-10">
+      <div className="absolute left-4 bottom-16 z-10 w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64">
         <Image
           src="/images/cursor.png"
           alt="Decorative arrow"
           fill
-          className="object-contain drop-shadow-[0_30px_90px_rgba(130,104,255,0.55)] animate-float"
+          className="object-contain animate-float"
           priority
         />
       </div>
-      <div className="absolute right-[-10px] md:right-4 top-[85%] -translate-y-1/2 w-44 h-44 md:w-64 md:h-64 z-10">
+      <div className="absolute right-4 bottom-16 z-10 w-24 h-24 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-64 lg:h-64">
         <Image
           src="/images/message1.png"
           alt="Decorative bubble"
           fill
-          className="object-contain drop-shadow-[0_30px_90px_rgba(130,104,255,0.55)] animate-float-delay"
+          className="object-contain animate-float-delay"
           priority
         />
       </div>
 
-      <div className="relative z-20 w-full max-w-[1200px] px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-[50px] sm:text-[68px] md:text-[82px] lg:text-[92px] leading-[1.02] font-black drop-shadow-[0_20px_60px_rgba(0,0,0,0.85)] tracking-[-0.04em]">
+      <div className="relative z-20 w-full max-w-screen-xl 2xl:max-w-7xl px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0 text-center">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02] font-black tracking-[-0.04em]">
           <span className="block">
             <span className="text-white">Innovative </span>
             <span className="text-[#8B5CF6]">Software</span>
@@ -38,15 +38,15 @@ export function Hero() {
             <span className="text-white"> for the future</span>
           </span>
         </h1>
-        <p className="mt-7 text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
+        <p className="mt-5 text-base sm:text-lg md:text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
           At CodeSwift, we deliver tailored IT solutions that drive business growth. With expertise in software development, cloud services, and IT consulting.
         </p>
 
-        <div className="mt-11 flex flex-col sm:flex-row justify-center gap-4 sm:gap-6">
-          <button className="px-11 py-3.5 bg-white text-black text-lg font-semibold rounded-full shadow-[0_22px_44px_rgba(0,0,0,0.28)] hover:-translate-y-[2px] transition-all duration-200">
+        <div className="mt-20 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 md:gap-6 w-full items-center z-20 relative">
+          <button className="w-32 sm:w-36 md:w-44 lg:w-56 px-0 py-3.5 bg-white text-black text-xs sm:text-sm md:text-base lg:text-lg font-semibold rounded-full hover:-translate-y-[2px] transition-all duration-200 mb-2 sm:mb-0">
             Contact Us
           </button>
-          <button className="relative px-11 py-3.5 rounded-full text-white text-lg font-semibold bg-white/0 hover:bg-white/6 transition-all duration-200 border border-white/18 shadow-[inset_0_0_0_1px_rgba(127,99,255,0.28)] after:content-[''] after:absolute after:inset-0 after:rounded-full after:border after:border-white/12 after:pointer-events-none">
+          <button className="w-32 sm:w-36 md:w-44 lg:w-56 px-0 py-3.5 relative rounded-full text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold bg-white/0 hover:bg-white/6 transition-all duration-200 border border-white/18 after:content-[''] after:absolute after:inset-0 after:rounded-full after:border after:border-white/12 after:pointer-events-none mb-2 sm:mb-0">
             View All Solutions
           </button>
         </div>

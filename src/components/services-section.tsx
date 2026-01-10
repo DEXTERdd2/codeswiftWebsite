@@ -57,7 +57,7 @@ export function ServicesSection() {
         />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-4">
         <div className="text-center mb-16">
           <motion.h2 
             className="text-4xl md:text-5xl font-bold mb-6"
@@ -83,27 +83,27 @@ export function ServicesSection() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-white/5 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{
-                boxShadow: "0 10px 30px -10px rgba(139, 92, 246, 0.2)",
-                borderColor: "rgba(139, 92, 246, 0.5)"
-              }}
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center mb-6">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-400">{service.description}</p>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-white/5 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-2 w-full flex flex-col items-center justify-center mx-auto min-h-[320px] md:min-h-[360px] lg:min-h-[500px] lg:max-w-[300px]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{
+                  boxShadow: "none",
+                  borderColor: "rgba(139, 92, 246, 0.5)"
+                }}
+              >
+                <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-xl bg-gradient-to-br from-purple-600/20 to-blue-600/20 flex items-center justify-center mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3 text-center">{service.title}</h3>
+                <p className="text-gray-400 text-center text-base lg:text-lg">{service.description}</p>
+              </motion.div>
+            ))}
         </div>
       </div>
     </section>

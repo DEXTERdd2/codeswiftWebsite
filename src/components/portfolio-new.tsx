@@ -31,11 +31,11 @@ export function PortfolioNew() {
   return (
     <section
       id="portfolio"
-      className="relative overflow-hidden bg-transparent py-28"
+      className="relative overflow-hidden bg-transparent py-12"
     >
       {/* Background glow removed so page background shows through */}
 
-      <div className="max-w-7xl mx-auto px-6 relative">
+      <div className="max-w-screen-xl 2xl:max-w-7xl mx-auto px-6 xl:px-12 2xl:px-0 relative">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -53,7 +53,7 @@ export function PortfolioNew() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:[grid-template-columns:0.9fr_1.7fr_0.9fr] gap-6 sm:gap-8 items-end">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 md:[grid-template-columns:0.9fr_1.7fr_0.9fr] gap-6 sm:gap-8 xl:gap-12 2xl:gap-16 items-end">
           {featured.map((project, index) => {
             return (
               <motion.article
@@ -71,7 +71,7 @@ export function PortfolioNew() {
                   h-[340px] xs:h-[420px] sm:h-[480px] md:h-[560px] md:h-[580px]
                   rounded-2xl xs:rounded-3xl md:rounded-[36px]
                   border border-white/10
-                  shadow-[0_20px_60px_rgba(0,0,0,0.45)] md:shadow-[0_40px_140px_rgba(0,0,0,0.85)]
+                  shadow-none
                   isolate
                   transition-transform duration-300
                   hover:-translate-y-2

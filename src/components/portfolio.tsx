@@ -92,7 +92,7 @@ export function Portfolio() {
           {projects.slice(0, visibleProjects).map((project) => (
             <div
               key={project.id}
-              className="group relative overflow-hidden rounded-xl bg-transparent shadow-none hover:shadow-none transition-shadow duration-300"
+              className="group relative overflow-hidden rounded-xl bg-transparent transition-shadow duration-300"
             >
               <div className="h-64 bg-gray-100 overflow-hidden">
                 <div className="w-full h-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
