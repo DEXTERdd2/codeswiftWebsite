@@ -70,7 +70,7 @@ export default function ClientPage() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden text-white relative bg-site-gradient">
+    <div className="min-h-screen overflow-x-hidden text-white relative bg-[linear-gradient(180deg,_#000000_0%,_#6639AD_38%,_#010101_100%)]">
       <div className="absolute inset-0 -z-10 hero-bg" style={{
           backgroundImage: `radial-gradient(ellipse at 50% 72%, rgba(156,81,255,0.34) 0%, rgba(124,58,237,0.18) 10%, transparent 28%), linear-gradient(180deg, #000000 0%, #0c0610 18%, #3c1b5a 40%, #6e2ed0 58%, #7C3AED 72%, #030002 100%)`,
           backgroundColor: '#000000',

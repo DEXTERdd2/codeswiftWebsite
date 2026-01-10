@@ -76,7 +76,7 @@ const globalPresence = [
 export default function AboutPage() {
   return (
     <>
-      <div className="relative min-h-screen bg-site-gradient">
+      <div className="relative min-h-screen bg-[linear-gradient(180deg,_#000000_0%,_#6639AD_38%,_#010101_100%)]">
 
         <div className="absolute inset-0 -z-10" aria-hidden="true" />
 
@@ -136,7 +136,7 @@ export default function AboutPage() {
             To empower businesses worldwide through smart, adaptive digital<br />
             and AI solutions, as a trusted global partner
           </p>
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 sm:gap-12 md:gap-20 mb-8 sm:mb-14 rounded-2xl border border-white/40 bg-transparent overflow-hidden px-4 sm:px-8 py-4 sm:py-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="flex flex-col md:grid md:grid-cols-3  text-center rounded-2xl border border-white/40 bg-transparent overflow-hidden px-4 sm:px-8 py-4 sm:py-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             {visionStats.map((stat, idx) => (
               <div key={stat.label} className="flex flex-row items-stretch w-full">
                 <div className="flex-1 flex flex-col items-center justify-center px-2 sm:px-6 md:px-10 py-4 sm:py-8 md:py-14 text-center">

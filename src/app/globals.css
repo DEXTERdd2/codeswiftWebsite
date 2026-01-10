@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
+  /* --background: #0a0a0a; */
   --foreground: #ffffff;
   --primary: #8b5cf6;
   --primary-dark: #7c3aed;
@@ -16,7 +16,7 @@
   }
   
   body {
-    @apply bg-gradient-to-b from-[#1E0B36] to-[#0A0A0A] text-gray-100 min-h-screen;
+    @apply bg-[linear-gradient(90deg,_#000000_0%,_#6639AD_38%,_#010101_100%)] text-gray-100 min-h-screen;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
@@ -138,12 +138,12 @@
 }
 
 /* Site gradient utility (uses the 4 brand colors; black at top, center, and end) */
-.bg-site-gradient {
-  /* central dark vignette to add a subtle black center */
+/* .bg-site-gradient {
+  central dark vignette to add a subtle black center
   background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0) 40%), radial-gradient(600px 280px at 15% 18%, rgba(143,111,255,0.06), transparent 18%), linear-gradient(180deg, #000000 0%, #07060a 4%, #200D42 10%, #4F21A1 55%, #8752FA 85%, #07060a 96%, #000000 100%);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: local;
-}
+} */
 
  

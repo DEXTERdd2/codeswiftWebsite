@@ -14,7 +14,7 @@ const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400','500','700'], displa
 
 export default function WebDevelopmentPage() {
   return (
-    <div className="min-h-screen text-white bg-site-gradient">
+    <div className="min-h-screen text-white bg-[linear-gradient(180deg,_#000000_0%,_#6639AD_38%,_#010101_100%)]">
       <HeroWebDevelopment />
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20">
