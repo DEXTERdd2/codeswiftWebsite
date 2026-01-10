@@ -40,7 +40,7 @@ export function Clients() {
                 src={company.src}
                 alt={company.name}
                 style={{ width: `${company.width}px`, height: 'auto' }}
-                className="opacity-75 hover:opacity-100 transition-opacity drop-shadow-[0_6px_18px_rgba(0,0,0,0.35)]"
+                className="opacity-75 hover:opacity-100 transition-opacity"
                 loading="lazy"
               />
             </motion.div>

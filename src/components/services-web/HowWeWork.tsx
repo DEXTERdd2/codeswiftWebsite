@@ -31,7 +31,7 @@ export function HowWeWork() {
                 <div className="text-white font-bold text-lg lg:text-xl mb-2 font-dm-sans">{step.title}</div>
                 <div className="text-white/80 text-sm lg:text-base mb-3 font-dm-sans leading-relaxed">{step.desc}</div>
                 <img src="/images/HowWebWorkSymbol.png" alt={`${step.title} symbol`} className="w-20 h-auto object-contain mb-3" />
-                <span className="inline-block bg-white text-[#2d225a] font-semibold px-4 py-1.5 rounded-lg shadow font-dm-sans text-sm text-center border border-[#ede9fe] whitespace-nowrap" style={{ letterSpacing: 0.1, boxShadow: '0 2px 8px rgba(44, 34, 90, 0.06)' }}>{step.chip}</span>
+                <span className="inline-block bg-white text-[#2d225a] font-semibold px-4 py-1.5 rounded-lg font-dm-sans text-sm text-center border border-[#ede9fe] whitespace-nowrap" style={{ letterSpacing: 0.1 }}>{step.chip}</span>
               </div>
             ))}
           </div>
@@ -59,7 +59,7 @@ export function HowWeWork() {
           <div className="mt-4 hidden lg:grid lg:grid-cols-5 lg:gap-6">
             {steps.map((step) => (
               <div key={step.title + '-chip'} className="flex justify-center">
-                <span className="inline-block bg-white text-[#2d225a] font-semibold px-4 sm:px-5 py-1.5 rounded-lg shadow font-dm-sans text-sm text-center border border-[#ede9fe] whitespace-nowrap overflow-hidden text-ellipsis" style={{ letterSpacing: 0.1, boxShadow: '0 2px 8px rgba(44, 34, 90, 0.06)' }}>{step.chip}</span>
+                <span className="inline-block bg-white text-[#2d225a] font-semibold px-4 sm:px-5 py-1.5 rounded-lg font-dm-sans text-sm text-center border border-[#ede9fe] whitespace-nowrap overflow-hidden text-ellipsis" style={{ letterSpacing: 0.1 }}>{step.chip}</span>
               </div>
             ))}
           </div>

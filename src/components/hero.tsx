@@ -68,14 +68,14 @@ export function Hero() {
             
             <div className="flex flex-col sm:flex-row justify-center gap-6 mb-20">
               <Button 
-                className="bg-white text-gray-900 hover:bg-gray-100 font-medium px-8 py-3 text-lg rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center"
+                className="bg-white text-gray-900 hover:bg-gray-100 font-medium px-8 py-3 text-lg rounded-md transition-all duration-300 hover:-translate-y-1 flex items-center"
               >
                 Contact Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
                 variant="outline" 
-                className="border-2 border-white/20 text-white bg-white/5 hover:bg-white/10 font-medium px-8 py-3 text-lg rounded-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="border-2 border-white/20 text-white bg-white/5 hover:bg-white/10 font-medium px-8 py-3 text-lg rounded-md transition-all duration-300 hover:-translate-y-1"
               >
                 View All Solutions
               </Button>

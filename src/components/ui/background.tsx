@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, useAnimation } from "framer-motion"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 type GlowingOrbProps = {
   x: number
@@ -59,6 +59,20 @@ export function Background() {
   ]
 
   // Subtle grid pattern
+  const [mounted, setMounted] = useState(false);
+  const [particles, setParticles] = useState<{size:number,left:number,top:number,delay:number}[]>([]);
+
+  useEffect(() => {
+    setMounted(true);
+    const p = Array.from({ length: 8 }).map(() => ({
+      size: Math.random() * 4 + 1,
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: Math.random() * 5
+    }));
+    setParticles(p);
+  }, []);
+
   const GridPattern = () => (
     <div 
       className="absolute inset-0 opacity-5"
@@ -87,34 +101,31 @@ export function Background() {
         <GlowingOrb key={i} {...gradient} />
       ))}
       
-      {/* Subtle animated particles */}
-      {Array.from({ length: 8 }).map((_, i) => {
-        const size = Math.random() * 4 + 1;
-        return (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-white/5"
-            style={{
-              width: size,
-              height: size,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              boxShadow: '0 0 10px 1px rgba(168, 85, 247, 0.3)'
-            }}
-            animate={{
-              opacity: [0.1, 0.3, 0.1],
-              y: [0, -10, 0]
-            }}
-            transition={{
-              duration: 15 + Math.random() * 10,
-              delay: Math.random() * 5,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-          />
-        )
-      })}
+      {/* Subtle animated particles (client-only) */}
+      {mounted && particles.map((p, i) => (
+        <motion.div
+          key={i}
+          className="absolute rounded-full bg-white/5"
+          style={{
+            width: p.size,
+            height: p.size,
+            left: `${p.left}%`,
+            top: `${p.top}%`,
+            boxShadow: 'none'
+          }}
+          animate={{
+            opacity: [0.1, 0.3, 0.1],
+            y: [0, -10, 0]
+          }}
+          transition={{
+            duration: 15 + Math.random() * 10,
+            delay: p.delay,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+        />
+      ))}
       {/* Subtle grid overlay */}
       <div 
         className="absolute inset-0 opacity-10" 

@@ -22,7 +22,7 @@ export function TrustedBy() {
                 src={brand.src}
                 alt={brand.name}
                 style={{ width: `${brand.width}px`, height: "auto" }}
-                className="opacity-70 hover:opacity-90 transition-opacity drop-shadow-[0_6px_18px_rgba(0,0,0,0.26)]"
+                className="opacity-70 hover:opacity-90 transition-opacity"
                 loading="lazy"
               />
             </div>

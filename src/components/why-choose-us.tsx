@@ -55,11 +55,11 @@ export function WhyChooseUs() {
   return (
     <section
       id="why-us"
-      className="relative overflow-hidden bg-transparent py-20 text-white"
+      className="relative overflow-hidden bg-transparent py-10 text-white"
     >
       {/* background decoration removed to let page background show through */}
 
-      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10 relative z-10">
+      <div className="mx-auto w-full max-w-screen-xl 2xl:max-w-7xl px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-0 relative z-10">
         <div className="grid items-start gap-6 lg:grid-cols-[1.1fr_1fr] mb-12">
           <motion.h2
             className="font-black text-center md:text-left text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[74px] leading-tight md:leading-[82.26px]"
@@ -90,32 +90,20 @@ export function WhyChooseUs() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-7 mb-14 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 gap-7 xl:gap-10 2xl:gap-14 mb-14 justify-items-center">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              className="relative flex h-[320px] xs:h-[350px] sm:h-[370px] md:h-[400px] lg:h-[420px] w-full flex-col justify-between overflow-hidden rounded-[15px] border border-transparent [background:linear-gradient(#2b0f65,#1a0d43)_padding-box,linear-gradient(180deg,#8752fa,rgba(255,255,255,0))_border-box] px-4 xs:px-5 sm:px-6 py-6 xs:py-7 sm:py-8 shadow-[2px_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[100px] transition-transform duration-200 hover:-translate-y-1.5"
+              className="relative flex h-[320px] xs:h-[350px] sm:h-[370px] md:h-[400px] lg:h-[420px] w-full flex-col justify-between overflow-hidden rounded-[15px] border border-white/20 bg-white/10 backdrop-blur-lg px-4 xs:px-5 sm:px-6 py-6 xs:py-7 sm:py-8 shadow-none transition-transform duration-200 hover:-translate-y-1.5"
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
             >
-              {/* Card background image */}
-              <div className="absolute inset-0 -z-10">
-                <Image
-                  src="/images/Rectangle.png"
-                  alt="Card background"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                  priority={false}
-                />
-              </div>
               <div className="relative z-10 flex h-full flex-col">
                 <div className="flex items-start justify-start">
-                  <div className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 flex items-center justify-center">
-                    <Image src={feature.iconSrc} alt={feature.title} width={96} height={96} className="h-16 w-16 xs:h-20 xs:w-20 sm:h-24 sm:w-24 object-contain" loading="lazy" />
+                  <div className="h-20 w-20 sm:h-24 sm:w-24 flex items-center justify-center">
+                    <Image src={feature.iconSrc} alt={feature.title} width={96} height={96} className="h-20 w-20 sm:h-24 sm:w-24 object-contain" loading="lazy" />
                   </div>
                 </div>
                 <div className="mt-auto space-y-2 xs:space-y-3 pt-6 xs:pt-10">
@@ -132,7 +120,7 @@ export function WhyChooseUs() {
         </div>
 
         <motion.div
-          className="rounded-3xl border border-white/16 bg-transparent px-3 xs:px-4 sm:px-8 md:px-12 py-7 sm:py-9 shadow-none"
+          className="rounded-3xl border border-white/40 bg-transparent px-3 xs:px-4 sm:px-8 md:px-12 py-7 sm:py-9 shadow-none"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -44,7 +44,7 @@ export function Header() {
           scrolled ? 'translate-y-0 scale-100' : 'translate-y-1 scale-[0.995]'
         }`}
       >
-        <div className="bg-gradient-to-r from-white/18 via-white/8 to-white/18 p-[1.4px] rounded-full shadow-[0_18px_60px_rgba(0,0,0,0.45)] backdrop-blur pointer-events-auto">
+        <div className="bg-gradient-to-r from-white/18 via-white/8 to-white/18 p-[1.4px] rounded-full backdrop-blur pointer-events-auto">
           <div className="relative flex items-center justify-between rounded-full bg-[#0b0b0f]/85 border border-white/8 px-5 py-2.5 sm:px-7 md:px-9">
             <div className="flex items-center gap-3">
               <Link
@@ -88,7 +88,7 @@ export function Header() {
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-base font-semibold text-black shadow-[0_12px_34px_rgba(0,0,0,0.35)] transition-transform hover:-translate-y-[1px]"
+                className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2 text-base font-semibold text-black transition-transform hover:-translate-y-[1px]"
               >
                 Get Quote
               </button>
@@ -115,7 +115,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-3 bg-[#0b0b0f]/92 border border-white/10 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur pointer-events-auto">
+          <div className="md:hidden mt-3 bg-[#0b0b0f]/92 border border-white/10 rounded-2xl backdrop-blur pointer-events-auto">
             <div className="flex flex-col space-y-2 px-4 py-4">
               {navItems.map((item) => (
                 <button
@@ -128,7 +128,7 @@ export function Header() {
               ))}
               <button
                 onClick={() => scrollToSection('contact')}
-                className="w-full mt-2 rounded-xl bg-white px-5 py-3 text-base font-semibold text-black shadow-[0_12px_34px_rgba(0,0,0,0.35)] hover:-translate-y-[1px] transition-transform"
+                className="w-full mt-2 rounded-xl bg-white px-5 py-3 text-base font-semibold text-black hover:-translate-y-[1px] transition-transform"
               >
                 Get Quote
               </button>

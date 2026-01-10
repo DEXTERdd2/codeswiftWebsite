@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Hero } from "@/components/codeswift/Hero";
 import { Services } from "@/components/codeswift/Services";
@@ -10,6 +9,7 @@ import { Leadership } from "@/components/leadership";
 import { PortfolioNew } from "@/components/portfolio-new";
 import { ContactForm } from "@/components/contact-form";
 import QuoteCTA from "@/components/QuoteCTA";
+import CubeHelixImage from "@/components/CubeHelixImage";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 
@@ -70,21 +70,15 @@ export default function ClientPage() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden text-white relative bg-transparent" style={{
-      background: 'transparent',
-    }}>
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/images/HomePageBackground.webp"
-          alt="Home background"
-          fill
-          className="object-cover hero-bg"
-          style={{ objectPosition: 'center 90px' }}
-          loading="eager"
-          priority={true}
-          sizes="100vw"
-        />
-      </div>
+    <div className="min-h-screen overflow-x-hidden text-white relative bg-site-gradient">
+      <div className="absolute inset-0 -z-10 hero-bg" style={{
+          backgroundImage: `radial-gradient(ellipse at 50% 72%, rgba(156,81,255,0.34) 0%, rgba(124,58,237,0.18) 10%, transparent 28%), linear-gradient(180deg, #000000 0%, #0c0610 18%, #3c1b5a 40%, #6e2ed0 58%, #7C3AED 72%, #030002 100%)`,
+          backgroundColor: '#000000',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 90px',
+          backgroundRepeat: 'no-repeat',
+          backgroundBlendMode: 'screen'
+        }} />
 
       {/* Subtle overlay for contrast (above image, behind page content) */}
       <div className="absolute inset-0 z-[-9] pointer-events-none" aria-hidden="true">
@@ -115,15 +109,16 @@ export default function ClientPage() {
       
       <main>
         <Hero />
-        <div className="mt-36" />
+        <div className="mb-5" />
         <TrustedBy />
         <Services />
         <WhyChooseUs />
         <PortfolioNew />
-        <Leadership />
-        <QuoteCTA />
+        <Leadership /> 
+        <QuoteCTA showHeading={false} />
+        <CubeHelixImage />
         <FAQ />
-      </main>
+      </main>   
       <Footer />
       
       <style jsx global>{`
@@ -167,27 +162,29 @@ export default function ClientPage() {
           border-radius: 4px;
         }
 
-        /* Background image object-position adjustments for different sizes (moved down) */
+        /* Background position adjustments (moved down) */
         .hero-bg {
-          object-position: center 190px;
+          background-position: center 190px;
+          background-size: cover;
+          background-repeat: no-repeat;
         }
 
-        /* Laptop widths: move image down a bit */
+        /* Laptop widths: move background down a bit */
         @media (min-width: 1025px) and (max-width: 1440px) {
           .hero-bg {
-            object-position: center 180px;
+            background-position: center 180px;
           }
         }
 
         @media (max-width: 1024px) {
           .hero-bg {
-            object-position: center 190px;
+            background-position: center 190px;
           }
         }
 
         @media (max-width: 640px) {
           .hero-bg {
-            object-position: center 130px;
+            background-position: center 130px;
           }
         }
       `}</style>

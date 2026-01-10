@@ -2,23 +2,28 @@
 
 import Image from "next/image";
 
+interface QuoteCTAProps {
+  showHeading?: boolean;
+}
 
-export default function QuoteCTA() {
+export default function QuoteCTA({ showHeading = true }: QuoteCTAProps) {
   return (
-    <section className="py-12">
+    <section className="py-2">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-            Get Instant <span className="text-[#8f6fff]">Quote From Us</span>
-          </h2>
-        </div>
+        {showHeading && (
+          <div className="text-center mb-2">
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
+              Get Instant <span className="text-[#8f6fff]">Quote From Us</span>
+            </h2>
+          </div>
+        )}
 
-        <div className="rounded-2xl bg-transparent py-12 md:py-20 md:px-12 flex flex-col-reverse lg:flex-row gap-10 md:gap-16 items-center lg:items-start">
-          {/* Left: Form card (uses existing ContactForm for logic/UI) */}
-          <div className="w-full max-w-md bg-transparent rounded-2xl p-6 md:p-8 border border-white/20 mt-8 lg:mt-0" style={{ boxShadow: '0 2px 32px 0 rgba(140, 92, 246, 0.10)' }}>
+        <div className="rounded-2xl bg-transparent py-6 md:py-10 md:px-12 flex flex-col-reverse sm:flex-row gap-10 md:gap-16 items-center sm:items-start">
+          {/* Form first for desktop left, mobile stacking */}
+          <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl 2xl:max-w-2xl bg-transparent rounded-2xl p-3 sm:p-6 lg:p-8 border border-white/40 mt-8 sm:mt-0" style={{ boxShadow: 'none' }}>
             <div className="text-white text-2xl md:text-3xl font-semibold mb-6">Get Quote Form Us</div>
             <form className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 sm:gap-4 lg:gap-6">
                 <input type="text" placeholder="First Name" className="rounded-lg border border-white/20 bg-transparent px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#8f6fff]" />
                 <input type="text" placeholder="Last Name" className="rounded-lg border border-white/20 bg-transparent px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#8f6fff]" />
                 <input type="text" placeholder="Phone Number" className="rounded-lg border border-white/20 bg-transparent px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#8f6fff]" />
@@ -33,11 +38,11 @@ export default function QuoteCTA() {
                   ))}
                 </div>
               </div>
-              <button type="submit" className="w-full mt-2 rounded-lg bg-[#8f6fff] text-white font-semibold py-3 text-lg shadow hover:bg-[#a084fa] transition-colors">Submit</button>
+              <button type="submit" className="w-full mt-2 rounded-lg bg-[#8f6fff] text-white font-semibold py-3 text-lg hover:bg-[#a084fa] transition-colors">Submit</button>
             </form>
           </div>
 
-          {/* Right: Marketing text and image */}
+          {/* Content and image second for desktop right, mobile stacking */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left">
             <div>
               <div className="text-4xl md:text-5xl font-extrabold mb-4">
@@ -47,8 +52,8 @@ export default function QuoteCTA() {
                 With expertise in software development, AI design, and cloud, we build systems that are secure, scalable, and future-ready. Wherever you are in the world, we’re here to turn your vision into reality.
               </div>
             </div>
-            <div className="mt-4 flex justify-center lg:justify-start">
-              <Image src="/images/cube-helix3.png" alt="Colorful cube" width={320} height={320} className="w-48 md:w-64 lg:w-80 h-auto object-contain drop-shadow-[0_25px_55px_rgba(0,0,0,0.45)]" />
+            <div className="mt-4 flex justify-center lg:justify-start lg:ml-16 xl:ml-24">
+              <Image src="/images/cube-helix3.png" alt="Colorful cube" width={200} height={200} className="w-32 md:w-40 lg:w-56 h-auto object-contain" />
             </div>
           </div>
         </div>

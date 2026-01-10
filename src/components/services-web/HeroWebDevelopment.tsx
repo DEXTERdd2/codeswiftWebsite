@@ -17,8 +17,8 @@ export function HeroWebDevelopment() {
           </h3>
 
           <div className="flex justify-center gap-4 mb-12">
-            <button className="rounded-full bg-white text-black px-8 py-3 shadow-md">Get Quote</button>
-            <button className="rounded-full bg-[#0b0b0d] border border-white/10 text-white px-6 py-3 shadow-[inset_0_-6px_18px_rgba(0,0,0,0.6)]">View All Solutions</button>
+            <button className="rounded-full bg-white text-black px-8 py-3">Get Quote</button>
+            <button className="rounded-full bg-[#0b0b0d] border border-white/10 text-white px-6 py-3">View All Solutions</button>
           </div>
 
           <div className="mx-auto max-w-6xl">
