@@ -38,9 +38,10 @@ export function Footer() {
       name: "Instagram",
       href: "https://www.instagram.com/",
       icon: (
-        <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.012-4.947.07-1.276.058-2.687.334-3.678 1.325-.991.991-1.267 2.402-1.325 3.678-.058 1.28-.07 1.688-.07 4.947s.012 3.667.07 4.947c.058 1.276.334 2.687 1.325 3.678.991.991 2.402 1.267 3.678 1.325 1.28.058 1.688.07 4.947.07s3.667-.012 4.947-.07c1.276-.058 2.687-.334 3.678-1.325.991-.991 1.267-2.402 1.325-3.678.058-1.28.07-1.688.07-4.947s-.012-3.667-.07-4.947c-.058-1.276-.334-2.687-1.325-3.678-.991-.991-2.402-1.267-3.678-1.325-1.28-.058-1.688-.07-4.947-.07z" />
-          <circle cx="12" cy="12" r="3.5" />
+        <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="5" />
+          <circle cx="12" cy="12" r="3" />
+          <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" />
         </svg>
       ),
     },
@@ -146,10 +147,13 @@ export function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#A56CFF] transition-colors duration-150"
                     aria-label={item.name}
+                    title={item.name}
+                    className="inline-flex items-center justify-center text-[#EDE6FF] transition-transform duration-150 transform hover:scale-105 hover:text-[#CDB8FF] focus:outline-none focus:ring-2 focus:ring-[#EDE6FF]/30"
                   >
-                    {item.icon}
+                    <span className="w-6 h-6 sm:w-7 sm:h-7">
+                      {item.icon}
+                    </span>
                   </a>
                 ))}
               </div>
