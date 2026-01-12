@@ -79,7 +79,7 @@ const globalPresence = [
 export default function AboutPage() {
   return (
     <>
-      <div className="relative min-h-screen bg-site-gradient">
+      <div className="relative min-h-screen bg-[linear-gradient(180deg,_#000000_0%,_#6639AD_38%,_#010101_100%)]">
 
         <div className="absolute inset-0 -z-10" aria-hidden="true" />
 
