@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 
 // Add your teamMembers array and scrollRef logic here
@@ -15,8 +15,6 @@ const teamMembers = [
     image: "/images/Azeem.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
-      { icon: <Twitter className="w-4 h-4" />, url: "#" },
-      { icon: <Github className="w-4 h-4" />, url: "#" },
     ]
   },
   {
@@ -25,8 +23,6 @@ const teamMembers = [
     image: "/images/Faizan.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
-      { icon: <Twitter className="w-4 h-4" />, url: "#" },
-      { icon: <Github className="w-4 h-4" />, url: "#" },
     ]
   },
   {
@@ -35,8 +31,6 @@ const teamMembers = [
     image: "/images/Nadir.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
-      { icon: <Twitter className="w-4 h-4" />, url: "#" },
-      { icon: <Github className="w-4 h-4" />, url: "#" },
     ]
   },
   {
@@ -45,17 +39,15 @@ const teamMembers = [
     image: "/images/Noman.jpeg",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "#" },
-      { icon: <Twitter className="w-4 h-4" />, url: "#" },
-      { icon: <Github className="w-4 h-4" />, url: "#" },
     ]
   }
 ];
 
 export function Leadership() {
   return (
-    <section id="leadership" className="relative overflow-hidden py-8 sm:py-10 md:py-12">
+    <section id="leadership" className="relative overflow-hidden py-0 pb-10 sm:pb-12">
       <div className="max-w-screen-xl 2xl:max-w-7xl mx-auto px-2 xs:px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-0">
-        <div className="text-left mb-8 sm:mb-10">
+          <div className="text-left mb-4 sm:mb-6">
           <h2
             className="font-black text-white leading-none text-3xl xs:text-4xl sm:text-5xl md:text-6xl flex flex-wrap gap-3"
             style={{ letterSpacing: "-0.04em" }}

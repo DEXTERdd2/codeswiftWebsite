@@ -12,8 +12,9 @@ type NavItem = {
 
 const navigation: NavItem[] = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
+  { name: "About", href: "/about" },
+  { name: "Career", href: "/career" },
 ];
 
 export function Header() {

@@ -18,7 +18,7 @@ export default function QuoteCTA({ showHeading = true }: QuoteCTAProps) {
           </div>
         )}
 
-        <div className="rounded-2xl bg-transparent py-6 md:py-10 md:px-12 flex flex-col-reverse sm:flex-row gap-10 md:gap-16 items-center sm:items-start">
+        <div className="rounded-2xl bg-transparent py-4 md:py-8 md:px-12 flex flex-col-reverse sm:flex-row gap-8 md:gap-12 items-center sm:items-start">
           {/* Form first for desktop left, mobile stacking */}
           <div className="w-full max-w-md sm:max-w-lg lg:max-w-xl 2xl:max-w-2xl bg-transparent rounded-2xl p-3 sm:p-6 lg:p-8 border border-white/40 mt-8 sm:mt-0" style={{ boxShadow: 'none' }}>
             <div className="text-white text-2xl md:text-3xl font-semibold mb-6">Get Quote Form Us</div>

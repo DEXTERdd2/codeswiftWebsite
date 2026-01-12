@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CubeHelixImage() {
   return (
-    <div className="flex justify-center lg:justify-start my-6 px-4 sm:px-8 lg:ml-32">
+    <div className="flex justify-center lg:justify-start my-2 px-4 sm:px-8 lg:ml-32">
       <img
         src="/images/cube-helix4.png"
         alt="Cube Helix"
