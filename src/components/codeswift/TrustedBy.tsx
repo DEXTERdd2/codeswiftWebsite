@@ -10,7 +10,6 @@ const brands = [
 export function TrustedBy() {
   return (
     <section className="relative isolate overflow-hidden bg-transparent py-10 mt-0 md:mt-4">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[radial-gradient(circle_at_top,_rgba(0,0,0,0.7)_0%,_transparent_70%)]" />
       <div className="relative max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <p className="text-[11px] sm:text-xs uppercase tracking-[0.32em] text-white/60">
           Trusted by the world's most innovative teams
