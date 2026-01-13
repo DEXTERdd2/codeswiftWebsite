@@ -7,27 +7,27 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const productLinks = [
-    { name: "Features", href: "#" },
+     
     { name: "Pricing", href: "#" },
-    { name: "Changelog", href: "#" },
+    
     { name: "Support", href: "#" },
   ]
 
   const legalLinks = [
     { name: "Terms of Privacy", href: "#" },
     { name: "Privacy Policy", href: "#" },
-    { name: "Security", href: "#" },
+     
   ]
 
   const companyLinks = [
-    { name: "Blog", href: "#" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "/about" },
+     
   ]
 
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/",
+      href: "https://www.linkedin.com/company/codeswiftorg",
       icon: (
         <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
           <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v4.72z" />
@@ -36,7 +36,7 @@ export function Footer() {
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/codeswiftorg/",
       icon: (
         <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -47,7 +47,7 @@ export function Footer() {
     },
     {
       name: "X",
-      href: "https://x.com/",
+      href: "https://x.com/CodeSwiftorg",
       icon: (
         <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
           <path d="M17.53 2.47a.75.75 0 0 1 1.06 1.06l-5.47 5.47 5.47 5.47a.75.75 0 0 1-1.06 1.06l-5.47-5.47-5.47 5.47a.75.75 0 0 1-1.06-1.06l5.47-5.47-5.47-5.47a.75.75 0 0 1 1.06-1.06l5.47 5.47 5.47-5.47z" />
@@ -56,7 +56,7 @@ export function Footer() {
     },
     {
       name: "Facebook",
-      href: "https://facebook.com/",
+      href: "https://www.facebook.com/profile.php?id=61585563306270",
       icon: (
         <svg fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5">
           <path d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.312h3.587l-.467 3.622h-3.12v9.293h6.116c.729 0 1.321-.592 1.321-1.324v-21.35c0-.733-.592-1.325-1.325-1.325z" />
