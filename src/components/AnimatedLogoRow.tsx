@@ -1,12 +1,22 @@
 import React from "react";
 
 const logos = [
-  { src: "/images/acme1.png", alt: "Acme Corp" },
-  { src: "/images/quantum1.png", alt: "Quantum" },
-  { src: "/images/echo1.png", alt: "Echo Valley" },
-  { src: "/images/celestia1.png", alt: "Celestial" },
-  { src: "/images/pulse1.png", alt: "PULSE" },
-  { src: "/images/apex1.png", alt: "APEX" },
+  { src: "/CompanyLogos/pngegg1.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg2.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg3.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg4.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg5.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg6.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg7.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg8.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg9.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg10.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg11.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg12.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg13.svg", alt: "company logo" },
+    { src: "/CompanyLogos/pngegg14.svg", alt: "company logo" },
+     
+
 ];
 
 export default function AnimatedLogoRow() {
@@ -18,7 +28,7 @@ export default function AnimatedLogoRow() {
             key={idx}
             src={logo.src}
             alt={logo.alt}
-            className="mx-8 h-9 opacity-60 flex-shrink-0"
+            className="mx-10 h-12 opacity-60 flex-shrink-0"
             draggable={false}
           />
         ))}
