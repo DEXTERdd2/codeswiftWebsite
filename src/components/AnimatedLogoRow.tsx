@@ -20,10 +20,6 @@ export default function AnimatedLogoRow() {
             alt={logo.alt}
             className="mx-8 h-9 opacity-60 flex-shrink-0"
             draggable={false}
-            onError={e => {
-              // fallback for missing SVG/PNG
-              (e.target as HTMLImageElement).src = '/images/placeholder.png';
-            }}
           />
         ))}
       </div>

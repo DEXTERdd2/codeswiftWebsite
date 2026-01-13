@@ -1,6 +1,7 @@
 import Image from "next/image";
+import AnimatedLogoRow from "@/components/AnimatedLogoRow";
 import { DM_Sans } from 'next/font/google';
-const dmSans = DM_Sans({ subsets: ['latin'], weight: ['300','400','500','700'], display: 'swap' });
+const dmSans = DM_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '700'], display: 'swap' });
 
 import { Leadership } from "@/components/leadership";
 import { ContactForm } from "@/components/contact-form";
@@ -8,7 +9,7 @@ import QuoteCTA from "@/components/QuoteCTA";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { main } from "framer-motion/client";
- import CubeHelixImage from "@/components/CubeHelixImage";
+import CubeHelixImage from "@/components/CubeHelixImage";
 const missionCards = [
   {
     icon: "/images/mission-icon1.png.png",
@@ -87,132 +88,125 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/6 via-transparent to-black/12" />
         </div>
 
-      <main className="relative z-20 min-h-screen bg-transparent text-white py-16 md:py-24 about-page">
-        {/* Subtle overlay for contrast (above image, inside main) */}
-        <div className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/6 via-transparent to-black/12" />
-        </div>
-        <div className="max-w-6xl mx-auto px-2 sm:px-4">
-          <div className="text-center">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-8 text-white mt-20 md:mt-24">About Us</h2>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-20 leading-tight">
-              Innovative Solutions for the <span className="text-[#8f6fff]">Future</span>
-            </h1>
-            <div className="text-xs sm:text-sm text-white/60 mb-2 sm:mb-6">Trusted by the world’s most innovative teams</div>
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-8 sm:mb-28">
-              <Image src="/images/acme1.png" alt="Acme Corp" width={100} height={32} className="h-8 w-auto object-contain opacity-80" />
-              <Image src="/images/quantum1.png" alt="Quantum" width={100} height={32} className="h-8 w-auto object-contain opacity-80" />
-              <Image src="/images/echo1.png" alt="Echo Valley" width={100} height={32} className="h-8 w-auto object-contain opacity-80" />
-              <Image src="/images/celestia1.png" alt="Celestial" width={100} height={32} className="h-8 w-auto object-contain opacity-80" />
-              <Image src="/images/pulse1.png" alt="Pulse" width={100} height={32} className="h-8 w-auto object-contain opacity-80" />
-              <Image src="/images/apex1.png" alt="Apex" width={100} height={32} className="h-8 w-auto object-contain opacity-80" />
+        <main className="relative z-20 min-h-screen bg-transparent text-white py-16 md:py-24 about-page">
+          {/* Subtle overlay for contrast (above image, inside main) */}
+          <div className="absolute inset-0 z-10 pointer-events-none" aria-hidden="true">
+            <div className="absolute inset-0 bg-gradient-to-b from-black/6 via-transparent to-black/12" />
+          </div>
+          <div className="max-w-6xl mx-auto px-2 sm:px-4">
+            <div className="text-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-8 text-white mt-20 md:mt-24">About Us</h2>
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-black mb-8 sm:mb-20 leading-tight">
+                Innovative Solutions for the <span className="text-[#8f6fff]">Future</span>
+              </h1>
+              <div className="text-xs sm:text-sm text-white/60 mb-2 sm:mb-6">Trusted by the world’s most innovative teams</div>
+
             </div>
           </div>
-        </div>
-
-        {/* Mission */}
-        <section className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-10">
-          <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em', color: '#fff' }}>
-            Our <span style={{ color: '#8f6fff' }}>Mission</span>
-          </h2>
-          <p className="text-center text-sm sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-10 max-w-2xl mx-auto">
-            We build, automate, and amplify, helping businesses move faster
-            <span className="block mt-2">and communicate more effectively.</span>
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-8 mt-4 sm:mt-6">
-            {missionCards.map((card) => (
-              <div key={card.title} className="rounded-2xl border border-white/40 bg-transparent px-2 sm:px-4 md:px-6 py-3 sm:py-4 md:py-6 text-center flex flex-col items-center transition-all duration-300 hover:scale-105 w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[260px] sm:min-h-[320px] md:min-h-[420px]">
-                <Image src={card.icon} alt={card.title} width={120} height={120} className="mb-3 sm:mb-4 h-16 sm:h-24 md:h-40 w-16 sm:w-24 md:w-40 object-contain" />
-                <h3 className={`${dmSans.className} text-[36px] font-[300] text-white mb-1 sm:mb-2 md:mb-4 text-center min-h-[72px] flex items-center justify-center`} style={{ lineHeight: '40px', letterSpacing: '-0.075em' }}>{card.title}</h3>
-                <p className={`${dmSans.className} text-[16px] font-[400] text-white/80 text-center max-w-xs mx-auto`} style={{ lineHeight: '24px' }}>{card.desc}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Vision */}
-        <section className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-10">
-          <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em', color: '#fff' }}>
-            Our <span style={{ color: '#8f6fff' }}>Vision</span>
-          </h2>
-          <p className="text-center text-sm sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-10 max-w-3xl mx-auto">
-            To empower businesses worldwide through smart, adaptive digital<br />
-            and AI solutions, as a trusted global partner
-          </p>
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-3 sm:gap-6 md:gap-10 mb-4 sm:mb-8 rounded-2xl border border-white/40 bg-transparent overflow-hidden px-4 sm:px-8 py-2 sm:py-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            {visionStats.map((stat, idx) => (
-              <div key={stat.label} className="flex flex-row items-stretch w-full">
-                <div className="flex-1 flex flex-col items-center justify-center px-2 sm:px-6 md:px-10 py-4 sm:py-8 md:py-14 text-center">
-                  <div className="text-xl sm:text-3xl md:text-6xl font-extrabold text-white mb-2 sm:mb-4 tracking-tight" style={{ fontFamily: 'inherit' }}>{stat.value}</div>
-                  <div className="text-base sm:text-lg md:text-2xl font-light text-white/80 mb-2 sm:mb-4 tracking-tight" style={{ fontFamily: 'inherit' }}>{stat.label}</div>
-                  <div className="text-xs sm:text-base font-light text-white/60 max-w-xs mx-auto tracking-tight" style={{ fontFamily: 'inherit' }}>{stat.desc}</div>
+          <AnimatedLogoRow />
+          {/* Mission */}
+          <section className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-10">
+            <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em', color: '#fff' }}>
+              Our <span style={{ color: '#8f6fff' }}>Mission</span>
+            </h2>
+            <p className="text-center text-sm sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-10 max-w-2xl mx-auto">
+              We build, automate, and amplify, helping businesses move faster
+              <span className="block mt-2">and communicate more effectively.</span>
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-8 mt-4 sm:mt-6">
+              {missionCards.map((card) => (
+                <div key={card.title} className="rounded-2xl border border-white/40 bg-transparent px-2 sm:px-4 md:px-6 py-3 sm:py-4 md:py-6 text-center flex flex-col items-center transition-all duration-300 hover:scale-105 w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[260px] sm:min-h-[320px] md:min-h-[420px]">
+                  <Image src={card.icon} alt={card.title} width={120} height={120} className="mb-3 sm:mb-4 h-16 sm:h-24 md:h-40 w-16 sm:w-24 md:w-40 object-contain" />
+                  <h3 className={`${dmSans.className} text-[36px] font-[300] text-white mb-1 sm:mb-2 md:mb-4 text-center min-h-[72px] flex items-center justify-center`} style={{ lineHeight: '40px', letterSpacing: '-0.075em' }}>{card.title}</h3>
+                  <p className={`${dmSans.className} text-[16px] font-[400] text-white/80 text-center max-w-xs mx-auto`} style={{ lineHeight: '24px' }}>{card.desc}</p>
                 </div>
-                {idx < visionStats.length - 1 && (
-                  <div className="hidden md:flex items-center" key={stat.label + '-divider'}>
-                    <div className="h-10 sm:h-20 md:h-40 w-px bg-white mx-2" />
+              ))}
+            </div>
+          </section>
+
+          {/* Vision */}
+          <section className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-10">
+            <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em', color: '#fff' }}>
+              Our <span style={{ color: '#8f6fff' }}>Vision</span>
+            </h2>
+            <p className="text-center text-sm sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-10 max-w-3xl mx-auto">
+              To empower businesses worldwide through smart, adaptive digital<br />
+              and AI solutions, as a trusted global partner
+            </p>
+            <div className="flex flex-col md:flex-row justify-center items-stretch gap-3 sm:gap-6 md:gap-10 mb-4 sm:mb-8 rounded-2xl border border-white/40 bg-transparent overflow-hidden px-4 sm:px-8 py-2 sm:py-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              {visionStats.map((stat, idx) => (
+                <div key={stat.label} className="flex flex-row items-stretch w-full">
+                  <div className="flex-1 flex flex-col items-center justify-center px-2 sm:px-6 md:px-10 py-4 sm:py-8 md:py-14 text-center">
+                    <div className="text-xl sm:text-3xl md:text-6xl font-extrabold text-white mb-2 sm:mb-4 tracking-tight" style={{ fontFamily: 'inherit' }}>{stat.value}</div>
+                    <div className="text-base sm:text-lg md:text-2xl font-light text-white/80 mb-2 sm:mb-4 tracking-tight" style={{ fontFamily: 'inherit' }}>{stat.label}</div>
+                    <div className="text-xs sm:text-base font-light text-white/60 max-w-xs mx-auto tracking-tight" style={{ fontFamily: 'inherit' }}>{stat.desc}</div>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Core Values */}
-        <section className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-10">
-          <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em' }}>
-            Our <span className="text-[#8f6fff]">Core Values</span>
-          </h2>
-          <p className="text-center text-sm sm:text-lg md:text-lg text-white/90 mb-4 sm:mb-10">
-            We are committed to delivering excellence, fostering innovation, and building long-term partnerships that empower businesses to succeed.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-8">
-            {coreValues.map((value) => (
-              <div key={value.title} className="rounded-2xl border border-white/20 bg-transparent p-2 sm:p-4 text-center flex flex-col items-center w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[180px] sm:min-h-[320px] md:min-h-[369px]">
-                <Image src={value.icon} alt={value.title} width={80} height={80} className="mb-2 sm:mb-6 h-12 sm:h-24 md:h-24 w-12 sm:w-24 md:w-24 object-contain" />
-                <h3 className={`${dmSans.className} text-[36px] font-[300] mb-1 sm:mb-2 text-white text-center min-h-[72px] flex items-center justify-center`} style={{ lineHeight: '40px', letterSpacing: '-0.075em' }}>{value.title}</h3> 
-                <p className={`${dmSans.className} text-[16px] font-[400] text-white/80 text-center` } style={{ lineHeight: '24px' }}>{value.desc}</p> 
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Global Presence */}
-        <section className="max-w-6xl mx-auto px-2 sm:px-4 py-4 sm:py-6 md:py-8">
-          <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em' }}>
-            Our <span className="text-[#8f6fff]">Global Presence</span>
-          </h2>
-          <p className="text-center text-sm sm:text-base md:text-lg text-white/90 mb-2 sm:mb-4">
-            We are committed to delivering excellence, fostering innovation, and building long-term partnerships that empower businesses to succeed.
-          </p>
-          <div className="flex flex-col md:flex-row justify-center items-center gap-2 sm:gap-4 md:gap-6 mb-0 sm:mb-2">
-            {globalPresence.map((loc, idx) => (
-              <div key={loc.label} className="rounded-2xl overflow-hidden relative w-full max-w-full md:max-w-[420px] lg:max-w-[500px] min-h-[180px] sm:min-h-[320px] md:min-h-[450px] aspect-[5/6] mx-auto">
-                <Image 
-                  src={loc.image} 
-                  alt={loc.label} 
-                  fill
-                  className="object-cover absolute inset-0 w-full h-full" 
-                  style={{ zIndex: 0 }}
-                />
-                {/* Overlay Shade */}
-                <div className="absolute inset-0 bg-purple-900 opacity-40 z-10" />
-                {/* Country Name */}
-                <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 bg-[#8f6fff]/30 backdrop-blur-sm rounded-lg px-2 sm:px-6 py-1 sm:py-2 z-20">
-                  <span className="text-white text-base sm:text-2xl md:text-3xl font-bold tracking-tight" style={{fontFamily:'DM Sans, sans-serif'}}>{loc.label}</span>
+                  {idx < visionStats.length - 1 && (
+                    <div className="hidden md:flex items-center" key={stat.label + '-divider'}>
+                      <div className="h-10 sm:h-20 md:h-40 w-px bg-white mx-2" />
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
 
-      </main>
-      <Leadership />
-      <QuoteCTA showHeading={false} />
-      <CubeHelixImage />
-      <FAQ />
-      <Footer />
-      
-      {/* About page styles moved to global CSS (src/app/globals.css) to avoid hydration mismatches */}
+          {/* Core Values */}
+          <section className="max-w-6xl mx-auto px-2 sm:px-4 py-6 sm:py-8 md:py-10">
+            <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em' }}>
+              Our <span className="text-[#8f6fff]">Core Values</span>
+            </h2>
+            <p className="text-center text-sm sm:text-lg md:text-lg text-white/90 mb-4 sm:mb-10">
+              We are committed to delivering excellence, fostering innovation, and building long-term partnerships that empower businesses to succeed.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 md:gap-6 mb-4 sm:mb-8">
+              {coreValues.map((value) => (
+                <div key={value.title} className="rounded-2xl border border-white/20 bg-transparent p-2 sm:p-4 text-center flex flex-col items-center w-full max-w-full md:max-w-[380px] mx-auto h-auto min-h-[180px] sm:min-h-[320px] md:min-h-[369px]">
+                  <Image src={value.icon} alt={value.title} width={80} height={80} className="mb-2 sm:mb-6 h-12 sm:h-24 md:h-24 w-12 sm:w-24 md:w-24 object-contain" />
+                  <h3 className={`${dmSans.className} text-[36px] font-[300] mb-1 sm:mb-2 text-white text-center min-h-[72px] flex items-center justify-center`} style={{ lineHeight: '40px', letterSpacing: '-0.075em' }}>{value.title}</h3>
+                  <p className={`${dmSans.className} text-[16px] font-[400] text-white/80 text-center`} style={{ lineHeight: '24px' }}>{value.desc}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Global Presence */}
+          <section className="max-w-6xl mx-auto px-2 sm:px-4 py-4 sm:py-6 md:py-8">
+            <h2 className={`${dmSans.className} text-[64px] font-[700] text-center mb-2 sm:mb-4`} style={{ lineHeight: '72px', letterSpacing: '-0.075em' }}>
+              Our <span className="text-[#8f6fff]">Global Presence</span>
+            </h2>
+            <p className="text-center text-sm sm:text-base md:text-lg text-white/90 mb-2 sm:mb-4">
+              We are committed to delivering excellence, fostering innovation, and building long-term partnerships that empower businesses to succeed.
+            </p>
+            <div className="flex flex-col md:flex-row justify-center items-center gap-2 sm:gap-4 md:gap-6 mb-0 sm:mb-2">
+              {globalPresence.map((loc, idx) => (
+                <div key={loc.label} className="rounded-2xl overflow-hidden relative w-full max-w-full md:max-w-[420px] lg:max-w-[500px] min-h-[180px] sm:min-h-[320px] md:min-h-[450px] aspect-[5/6] mx-auto">
+                  <Image
+                    src={loc.image}
+                    alt={loc.label}
+                    fill
+                    className="object-cover absolute inset-0 w-full h-full"
+                    style={{ zIndex: 0 }}
+                  />
+                  {/* Overlay Shade */}
+                  <div className="absolute inset-0 bg-purple-900 opacity-40 z-10" />
+                  {/* Country Name */}
+                  <div className="absolute bottom-2 left-2 sm:bottom-6 sm:left-6 bg-[#8f6fff]/30 backdrop-blur-sm rounded-lg px-2 sm:px-6 py-1 sm:py-2 z-20">
+                    <span className="text-white text-base sm:text-2xl md:text-3xl font-bold tracking-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>{loc.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+        </main>
+        <Leadership />
+        <QuoteCTA showHeading={false} />
+        <CubeHelixImage />
+        <FAQ />
+        <Footer />
+
+        {/* About page styles moved to global CSS (src/app/globals.css) to avoid hydration mismatches */}
 
       </div>
     </>
