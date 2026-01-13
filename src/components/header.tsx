@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useHeaderMenu } from "@/context/HeaderMenuContext";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
@@ -19,7 +20,7 @@ const navigation: NavItem[] = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const { servicesOpen, setServicesOpen } = useHeaderMenu();
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileGroupsOpen, setMobileGroupsOpen] = useState<Record<string, boolean>>({});
   const servicesRef = useRef<HTMLDivElement | null>(null); // nav trigger wrapper

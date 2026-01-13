@@ -24,15 +24,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { HeaderMenuProvider } = require("@/context/HeaderMenuContext");
   return (
     <html lang="en" className="scroll-smooth">
       <head>
         <link rel="icon" type="image/svg+xml" href="/Vector.svg" />
       </head>
       <body className={`${inter.className} antialiased text-white min-h-screen`}>
-        <Background />
-        <Header />
-        {children}
+        <HeaderMenuProvider>
+          <Background />
+          <Header />
+          {children}
+        </HeaderMenuProvider>
       </body>
     </html>
   );
