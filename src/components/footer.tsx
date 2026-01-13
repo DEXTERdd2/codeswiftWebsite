@@ -72,7 +72,7 @@ export function Footer() {
           {/* Logo */}
           <div className="flex items-center justify-center lg:justify-start mb-6 lg:mb-0">
             <Image
-              src="/images/logo-symbol.png"
+              src="/images/500w.svg"
               alt="CodeSwift Logo"
               width={180}
               height={40}

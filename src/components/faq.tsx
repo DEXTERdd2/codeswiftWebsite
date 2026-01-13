@@ -10,20 +10,20 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "How does the pricing work for teams",
-    answer: "We tailor pricing based on scope, timeline, and team size, ensuring the best value for your project."
+    question: "What services does CodeSwift offer?",
+    answer: "CodeSwift provides end-to-end digital solutions including custom software development, web and mobile applications, AI-driven solutions, UI/UX design, cloud services, and ongoing product support. From idea to scale, we help businesses build technology that actually works for them."
   },
   {
-    question: "How does the pricing work for teams",
-    answer: "We tailor pricing based on scope, timeline, and team size, ensuring the best value for your project."
+    question: "How does CodeSwift ensure project quality?",
+    answer: "Quality is built into our process. Every project goes through structured planning, disciplined engineering, regular testing, and continuous client feedback. Our teams follow best practices in code standards, performance optimization, security, and scalability to ensure reliable, high-quality outcomes."
   },
   {
-    question: "How does the pricing work for teams",
-    answer: "We tailor pricing based on scope, timeline, and team size, ensuring the best value for your project."
+    question: "How do I start a project with CodeSwift?",
+    answer: "Getting started is simple. Reach out to us with your idea or challenge, and we’ll schedule a discovery call. From there, we define requirements, timelines, and scope, followed by a clear proposal. Once aligned, our team begins execution with regular updates and collaboration."
   },
   {
-    question: "How does the pricing work for teams",
-    answer: "We tailor pricing based on scope, timeline, and team size, ensuring the best value for your project."
+    question: "Can CodeSwift support projects after launch?",
+    answer: "Yes. CodeSwift offers ongoing post-launch support including maintenance, performance optimization, feature enhancements, monitoring, and scaling as your business grows. We aim to be a long-term technology partner, not just a one-time development vendor."
   }
 ];
 

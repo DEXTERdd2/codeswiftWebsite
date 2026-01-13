@@ -27,7 +27,7 @@ const teamMembers = [
   },
   {
     name: "Nadir Khan",
-    role: "Chief Managing officer",
+    role: "Chief Managing Officer",
     image: "/images/Nadir.png",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/nadirkhan2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
@@ -35,7 +35,7 @@ const teamMembers = [
   },
   {
     name: "Noman Ikram",
-    role: "Chief operating officer",
+    role: "Chief Operating Officer",
     image: "/images/Noman.png",
     social: [
       { icon: <Linkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/noman-ikram-912603116?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },

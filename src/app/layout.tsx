@@ -9,7 +9,7 @@ import AnimatedLogoRow from "@/components/AnimatedLogoRow";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CodeSwift - Modern Web Development",
+  title: "CodeSwift",
   description: "Transforming ideas into powerful digital solutions",
   keywords: ["web development", "mobile apps", "UI/UX design", "software development", "tech solutions"],
 };
