@@ -52,8 +52,7 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid gap-x-0 gap-y-10 items-stretch justify-center justify-items-center"
-          style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-0 sm:gap-x-4 gap-y-10 items-stretch justify-center justify-items-center">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

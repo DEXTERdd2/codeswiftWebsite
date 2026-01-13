@@ -4,6 +4,7 @@ import "./globals.css";
 import "./webdev-cards.css";
 import { Header } from "../components/header";
 import { Background } from "@/components/ui/background";
+import AnimatedLogoRow from "@/components/AnimatedLogoRow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased text-white min-h-screen`}>
         <Background />
         <Header />
+         
         {children}
       </body>
     </html>

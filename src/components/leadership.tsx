@@ -12,33 +12,33 @@ const teamMembers = [
   {
     name: "Azeem Khalid",
     role: "Chief Executive Officer",
-    image: "/images/Azeem.jpeg",
+    image: "/images/Azeem.png",
     social: [
-      { icon: <Linkedin className="w-4 h-4" />, url: "#" },
+      { icon: <Linkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/azeem-khalid-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ]
   },
   {
     name: "Faizan Shahid",
     role: "Chief Technology Officer",
-    image: "/images/Faizan.jpeg",
+    image: "/images/Faizan.png",
     social: [
-      { icon: <Linkedin className="w-4 h-4" />, url: "#" },
+      { icon: <Linkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/faizan-shahid-7471aa219?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ]
   },
   {
     name: "Nadir Khan",
-    role: "Lead Developer",
-    image: "/images/Nadir.jpeg",
+    role: "Chief Managing officer",
+    image: "/images/Nadir.png",
     social: [
-      { icon: <Linkedin className="w-4 h-4" />, url: "#" },
+      { icon: <Linkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/nadirkhan2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ]
   },
   {
     name: "Noman Ikram",
     role: "Chief operating officer",
-    image: "/images/Noman.jpeg",
+    image: "/images/Noman.png",
     social: [
-      { icon: <Linkedin className="w-4 h-4" />, url: "#" },
+      { icon: <Linkedin className="w-4 h-4" />, url: "https://www.linkedin.com/in/noman-ikram-912603116?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
     ]
   }
 ];
@@ -73,6 +73,7 @@ export function Leadership() {
                   src={member.image}
                   alt={member.name}
                   fill
+                  unoptimized
                   className="absolute inset-0 w-full h-full object-cover z-0"
                   style={{ objectPosition: 'top' }}
                   loading="lazy"

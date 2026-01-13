@@ -1,12 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRef } from "react";
 import { Hero } from "@/components/codeswift/Hero";
 import { Services } from "@/components/codeswift/Services";
-import { TrustedBy } from "@/components/codeswift/TrustedBy";
+import AnimatedLogoRow from "@/components/AnimatedLogoRow";
 import { WhyChooseUs } from "@/components/why-choose-us";
 import { Leadership } from "@/components/leadership";
-import { PortfolioNew } from "@/components/portfolio-new";
+
 import { ContactForm } from "@/components/contact-form";
 import QuoteCTA from "@/components/QuoteCTA";
 import CubeHelixImage from "@/components/CubeHelixImage";
@@ -15,6 +16,12 @@ import { Footer } from "@/components/footer";
 
 export default function ClientPage() {
   const [isMounted, setIsMounted] = useState(false);
+  const contactFormRef = useRef<HTMLDivElement>(null);
+  const handleContactClick = () => {
+    if (contactFormRef.current) {
+      contactFormRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     setIsMounted(true);
@@ -34,24 +41,19 @@ export default function ClientPage() {
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!cursor) return;
-      
       // Update cursor position with minimal delay
       cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-
       // Handle hover effects
       const target = e.target as HTMLElement;
       const isInteractive = target?.matches?.('a, button, [role="button"], .cursor-pointer, input, textarea, select, a *');
-      
       if (isInteractive) {
         cursor.classList.add('hover');
       } else {
         cursor.classList.remove('hover');
       }
     };
-
     // Add event listeners
     document.addEventListener('mousemove', handleMouseMove);
-
     // Cleanup
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
@@ -69,6 +71,7 @@ export default function ClientPage() {
     );
   }
 
+  // ...existing code...
   return (
     <div className="min-h-screen overflow-x-hidden text-white relative bg-[linear-gradient(180deg,_#000000_0%,_#6639AD_38%,_#010101_100%)]">
       <div className="absolute inset-0 -z-10 hero-bg" style={{
@@ -108,17 +111,19 @@ export default function ClientPage() {
       {/* Speech Bubble - Removed for now to simplify */}
       
       <main>
-        <Hero />
+        <Hero onContactClick={handleContactClick} />
         <div className="mb-5" />
-        <TrustedBy />
+        <AnimatedLogoRow />
         <Services />
         <WhyChooseUs />
-        <PortfolioNew />
-        <Leadership /> 
-        <QuoteCTA showHeading={false} />
+        <Leadership />
+        <div ref={contactFormRef}>
+          <QuoteCTA showHeading={false} />
+        </div>
         <CubeHelixImage />
         <FAQ />
-      </main>   
+         
+      </main>
       <Footer />
       
       <style jsx global>{`

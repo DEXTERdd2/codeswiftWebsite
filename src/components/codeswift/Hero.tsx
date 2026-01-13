@@ -1,6 +1,7 @@
+
 import Image from 'next/image';
 
-export function Hero() {
+export function Hero({ onContactClick }: { onContactClick?: () => void }) {
   return (
     <section
       id="home"
@@ -43,7 +44,10 @@ export function Hero() {
         </p>
 
         <div className="mt-20 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 md:gap-6 w-full items-center z-20 relative">
-          <button className="w-32 sm:w-36 md:w-44 lg:w-56 px-0 py-3.5 bg-white text-black text-xs sm:text-sm md:text-base lg:text-lg font-semibold rounded-full hover:-translate-y-[2px] transition-all duration-200 mb-2 sm:mb-0">
+          <button
+            className="w-32 sm:w-36 md:w-44 lg:w-56 px-0 py-3.5 bg-white text-black text-xs sm:text-sm md:text-base lg:text-lg font-semibold rounded-full hover:-translate-y-[2px] transition-all duration-200 mb-2 sm:mb-0"
+            onClick={onContactClick}
+          >
             Contact Us
           </button>
           <button className="w-32 sm:w-36 md:w-44 lg:w-56 px-0 py-3.5 relative rounded-full text-white text-xs sm:text-sm md:text-base lg:text-lg font-semibold bg-white/0 hover:bg-white/6 transition-all duration-200 border border-white/18 after:content-[''] after:absolute after:inset-0 after:rounded-full after:border after:border-white/12 after:pointer-events-none mb-2 sm:mb-0">
