@@ -1,0 +1,35 @@
+/* Services unique card styles (glassmorphism, improved shadow, icon, etc.) */
+.services-card-outer { 
+@apply relative z-10 rounded-2xl w-full max-w-[95vw] sm:max-w-[340px] md:max-w-[350px] min-w-[0] h-auto min-h-[220px] sm:min-h-[280px] md:min-h-[320px] max-h-[none] shadow-[0_8px_32px_0_rgba(135,82,250,0.18)] hover:shadow-[0_16px_48px_0_rgba(135,82,250,0.32)] transition-transform duration-200 transition-shadow duration-300 ease-out hover:-translate-y-2 flex flex-col mx-0;
+}
+.services-card-inner {
+  @apply flex-1 flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10 shadow-inner w-full h-full;
+}
+  .services-card-inner {
+  @apply flex-1 flex flex-col justify-between items-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur-md px-8 py-10 shadow-inner w-full h-full;
+}
+.services-card-icon {
+  @apply mx-auto mb-7 flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-md p-4;
+}
+.services-card-title {
+  @apply text-center text-[20px] font-extrabold leading-snug text-white mb-4 tracking-tight drop-shadow;
+}
+.services-card-desc {
+  @apply text-center text-base text-white/80 leading-relaxed max-w-[260px];
+}
+/* Web Development unique card styles */
+.webdev-card-outer {
+  @apply relative z-10 rounded-2xl h-full shadow-[0_30px_90px_rgba(135,82,250,0.28)] hover:shadow-[0_40px_110px_rgba(135,82,250,0.40)] transition-shadow duration-300 ease-out;
+}
+.webdev-card-inner {
+  @apply overflow-hidden rounded-2xl p-8 bg-transparent border border-white/10 min-h-[340px] h-full flex flex-col items-center justify-between;
+}
+.webdev-card-icon {
+  @apply mb-6 w-36 h-36 flex items-center justify-center rounded-2xl bg-transparent;
+}
+.webdev-card-title {
+  @apply text-[28px] sm:text-[32px] md:text-[36px] font-medium text-white mb-4;
+}
+.webdev-card-desc {
+  @apply text-[14px] sm:text-[16px] leading-relaxed text-white/70 max-w-[360px];
+}

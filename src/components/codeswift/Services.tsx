@@ -38,7 +38,7 @@ export function Services() {
     <section id="services" className="relative overflow-hidden bg-transparent py-10 text-white">
       {/* Decorations removed so page background shows through */}
 
-      <div className="mx-auto w-full max-w-screen-xl 2xl:max-w-7xl px-5 sm:px-8 lg:px-10 xl:px-12 2xl:px-0 relative z-10">
+      <div className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         <motion.div
           className="text-center mb-14"
           initial={{ opacity: 0, y: 20 }}
@@ -52,23 +52,24 @@ export function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-7 xl:gap-10 2xl:gap-14">
+        <div className="grid gap-x-0 gap-y-10 items-stretch justify-center justify-items-center"
+          style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="group rounded-2xl border border-[#29292F] bg-transparent px-8 py-10 transition-transform duration-200 hover:-translate-y-2"
+              className="services-card-outer"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.06 }}
             >
-              <div className="mx-auto mb-7 flex h-20 w-20 items-center justify-center rounded-2xl bg-white">
-                <img src={service.icon} alt={service.title} className="h-12 w-12" />
+              <div className="services-card-inner">
+                <div className="services-card-icon">
+                  <img src={service.icon} alt={service.title} className="h-12 w-12" />
+                </div>
+                <h3 className="services-card-title">{service.title}</h3>
+                <p className="services-card-desc">{service.description}</p>
               </div>
-              <h3 className="text-center text-[18px] font-semibold leading-snug text-white mb-4">{service.title}</h3>
-              <p className="text-center text-sm md:text-base text-gray-200 leading-relaxed">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>

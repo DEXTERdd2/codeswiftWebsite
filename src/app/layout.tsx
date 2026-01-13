@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./webdev-cards.css";
 import { Header } from "../components/header";
 import { Background } from "@/components/ui/background";
 

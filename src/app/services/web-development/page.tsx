@@ -30,46 +30,52 @@ export default function WebDevelopmentPage() {
         {/* What we offer */}
         <section className="mb-20">
           <h3 className="text-3xl font-extrabold text-center mb-8">What <span className="text-[#8f6fff]">We Offer</span></h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-stretch">
             {/* Card 1 */}
-            <div className="relative rounded-2xl overflow-hidden p-8 bg-[linear-gradient(180deg,rgba(17,8,22,0.6),rgba(11,6,17,0.6))] border border-white/10 min-h-[340px] flex flex-col items-center justify-between">
-              <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'none' }} />
-              <div className="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-gradient-to-br from-[#7b3ff6]/10 to-[#3ac2e0]/8 blur-3xl opacity-50 pointer-events-none" />
+            <div className="webdev-card-outer">
+              <div className="webdev-card-inner">
+                <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'none' }} />
+                <div className="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-gradient-to-br from-[#7b3ff6]/10 to-[#3ac2e0]/8 blur-3xl opacity-50 pointer-events-none" />
 
-              <div className="mt-4 flex flex-col items-center text-center px-4">
-                <div className="mb-6 w-36 h-36 flex items-center justify-center">
-                  <Image src="/images/WebDevelopmnetIcon1.png" alt="Custom Web Design" width={140} height={140} className="object-contain" />
+                <div className="mt-4 flex flex-col items-center text-center px-4">
+                  <div className="webdev-card-icon">
+                    <Image src="/images/WebDevelopmnetIcon1.png" alt="Custom Web Design" width={140} height={140} className="object-contain" />
+                  </div>
+                  <h4 className={`webdev-card-title ${dmSans.className}`}>Custom Web Design</h4>
+                  <p className={`webdev-card-desc ${dmSans.className}`}>Tailored, mobile-responsive design to ensure your site looks perfect on any device.</p>
                 </div>
-                <h4 className={`${dmSans.className} text-[28px] sm:text-[32px] md:text-[36px] font-medium text-white mb-4`} style={{ letterSpacing: '-0.075em' }}>Custom Web Design</h4>
-                <p className={`${dmSans.className} text-[14px] sm:text-[16px] leading-relaxed text-white/70 max-w-[360px]`}>Tailored, mobile-responsive design to ensure your site looks perfect on any device.</p>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="relative rounded-2xl overflow-hidden p-8 bg-[linear-gradient(180deg,rgba(17,8,22,0.6),rgba(11,6,17,0.6))] border border-white/10 min-h-[340px] flex flex-col items-center justify-between">
-              <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'none' }} />
-              <div className="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-gradient-to-br from-[#7b3ff6]/10 to-[#3ac2e0]/8 blur-3xl opacity-50 pointer-events-none" />
+            <div className="webdev-card-outer">
+              <div className="webdev-card-inner">
+                <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'none' }} />
+                <div className="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-gradient-to-br from-[#7b3ff6]/10 to-[#3ac2e0]/8 blur-3xl opacity-50 pointer-events-none" />
 
-              <div className="mt-4 flex flex-col items-center text-center px-4">
-                <div className="mb-6 w-36 h-36 flex items-center justify-center">
-                  <Image src="/images/WebDevelopmnetIcon2.png" alt="Custom UI/UX" width={140} height={140} className="object-contain" />
+                <div className="mt-4 flex flex-col items-center text-center px-4">
+                  <div className="webdev-card-icon">
+                    <Image src="/images/WebDevelopmnetIcon2.png" alt="Custom UI/UX" width={140} height={140} className="object-contain" />
+                  </div>
+                  <h4 className={`webdev-card-title ${dmSans.className}`}>Custom UI/UX</h4>
+                  <p className={`webdev-card-desc ${dmSans.className}`}>Creative UX/UI design focused on intuitive, user-centered experiences.</p>
                 </div>
-                <h4 className={`${dmSans.className} text-[28px] sm:text-[32px] md:text-[36px] font-medium text-white mb-4`} style={{ letterSpacing: '-0.075em' }}>Custom UI/UX</h4>
-                <p className={`${dmSans.className} text-[14px] sm:text-[16px] leading-relaxed text-white/70 max-w-[360px]`}>Creative UX/UI design focused on intuitive, user-centered experiences.</p>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="relative rounded-2xl overflow-hidden p-8 bg-[linear-gradient(180deg,rgba(17,8,22,0.6),rgba(11,6,17,0.6))] border border-white/10 min-h-[340px] flex flex-col items-center justify-between">
-              <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'none' }} />
-              <div className="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-gradient-to-br from-[#7b3ff6]/10 to-[#3ac2e0]/8 blur-3xl opacity-50 pointer-events-none" />
+            <div className="webdev-card-outer">
+              <div className="webdev-card-inner">
+                <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ boxShadow: 'none' }} />
+                <div className="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-gradient-to-br from-[#7b3ff6]/10 to-[#3ac2e0]/8 blur-3xl opacity-50 pointer-events-none" />
 
-              <div className="mt-4 flex flex-col items-center text-center px-4">
-                <div className="mb-6 w-36 h-36 flex items-center justify-center">
-                  <Image src="/images/WebDevelopmnetIcon3.png" alt="SEO-Optimized Websites" width={140} height={140} className="object-contain" />
+                <div className="mt-4 flex flex-col items-center text-center px-4">
+                  <div className="webdev-card-icon">
+                    <Image src="/images/WebDevelopmnetIcon3.png" alt="SEO-Optimized Websites" width={140} height={140} className="object-contain" />
+                  </div>
+                  <h4 className={`webdev-card-title ${dmSans.className}`}>SEO-Optimized Websites</h4>
+                  <p className={`webdev-card-desc ${dmSans.className}`}>We build sites optimized for search engines to help you rank higher and attract more traffic.</p>
                 </div>
-                <h4 className={`${dmSans.className} text-[28px] sm:text-[32px] md:text-[36px] font-medium text-white mb-4`} style={{ letterSpacing: '-0.075em' }}>SEO-Optimized Websites</h4>
-                <p className={`${dmSans.className} text-[14px] sm:text-[16px] leading-relaxed text-white/70 max-w-[360px]`}>We build sites optimized for search engines to help you rank higher and attract more traffic.</p>
               </div>
             </div>
           </div>
