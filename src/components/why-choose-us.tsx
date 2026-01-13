@@ -120,7 +120,7 @@ export function WhyChooseUs() {
         </div>
 
         <motion.div
-          className="rounded-3xl border border-white/40 bg-transparent px-3 xs:px-4 sm:px-8 md:px-12 py-7 sm:py-9 shadow-none"
+          className="rounded-[15px] border border-white/20 bg-white/10 backdrop-blur-lg px-3 xs:px-4 sm:px-8 md:px-12 py-7 sm:py-9 shadow-none"
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
