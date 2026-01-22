@@ -138,10 +138,10 @@ export function Header() {
                         aria-controls="services-panel"
                         aria-haspopup="menu"
                         className={`text-white text-lg font-medium px-2 py-1 transition-colors focus:outline-none ${servicesOpen ? 'text-white' : 'hover:text-white/80'}`}
-                        onClick={() => { if (isTouch) setServicesOpen(prev => !prev); else openServicesMenu(); }}
+                        onClick={() => { if (isTouch) setServicesOpen(!servicesOpen); else openServicesMenu(); }}
                         onFocus={() => { if (!isTouch) openServicesMenu(); }}
                         onBlur={() => { if (!isTouch) setTimeout(() => { if (servicesRef.current && !servicesRef.current.contains(document.activeElement)) scheduleCloseServices(80); }, 100); }}
-                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setServicesOpen(prev => !prev); } }}
+                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setServicesOpen(!servicesOpen); } }}
                       >
                         {item.name}
                       </button>
