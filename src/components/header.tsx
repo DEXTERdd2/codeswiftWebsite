@@ -156,7 +156,7 @@ export function Header() {
 
               {/* Desktop CTA */}
               <div className="hidden md:flex flex-shrink-0">
-                <Link href="#contact" className={`inline-flex items-center justify-center rounded-2xl font-semibold px-6 py-2.5 text-base transition-colors ${servicesOpen ? 'bg-white text-black' : 'bg-white text-black hover:bg-gray-200'}`}>
+                <Link href="/get-quote" className={`inline-flex items-center justify-center rounded-2xl font-semibold px-6 py-2.5 text-base transition-colors ${servicesOpen ? 'bg-white text-black' : 'bg-white text-black hover:bg-gray-200'}`}>
                   Get Quote
                 </Link>
               </div>
@@ -376,7 +376,7 @@ export function Header() {
           </div>
 
           <div className="px-6 py-4 border-t border-gray-800">
-            <Link href="#contact" className="block w-full text-center bg-white text-black font-semibold rounded-xl px-4 py-3 text-base border border-gray-300 hover:bg-gray-200 transition-colors" onClick={() => setMobileMenuOpen(false)}>Get Quote</Link>
+            <Link href="/get-quote" className="block w-full text-center bg-white text-black font-semibold rounded-xl px-4 py-3 text-base border border-gray-300 hover:bg-gray-200 transition-colors" onClick={() => setMobileMenuOpen(false)}>Get Quote</Link>
           </div>
         </div>
       )}

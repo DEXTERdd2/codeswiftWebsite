@@ -6,9 +6,8 @@ import { Hero } from "@/components/codeswift/Hero";
 import { Services } from "@/components/codeswift/Services";
 import AnimatedLogoRow from "@/components/AnimatedLogoRow";
 import { WhyChooseUs } from "@/components/why-choose-us";
-import { Leadership } from "@/components/leadership";
-
-import { ContactForm } from "@/components/contact-form";
+// import { Leadership } from "@/components/leadership";
+// import { ContactForm } from "@/components/contact-form";
 import QuoteCTA from "@/components/QuoteCTA";
 import CubeHelixImage from "@/components/CubeHelixImage";
 import { FAQ } from "@/components/faq";
@@ -116,7 +115,7 @@ export default function ClientPage() {
         <AnimatedLogoRow />
         <Services />
         <WhyChooseUs />
-        <Leadership />
+        {/* <Leadership /> */}
         <div ref={contactFormRef}>
           <QuoteCTA showHeading={false} />
         </div>
