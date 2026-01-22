@@ -121,9 +121,6 @@ export default function GetQuotePage() {
         >
           <h2
             style={{
-              fontFamily: 'DM Sans, sans-serif',
-              fontWeight: 300,
-              fontSize: '27.18px',
               lineHeight: '21.68px',
               letterSpacing: '0.02em',
               color: '#FFF',
@@ -328,40 +325,76 @@ export default function GetQuotePage() {
           </div>
           <div className="flex flex-col md:flex-row gap-8">
             <div className="flex-1">
-              <ul style={{marginBottom: '0'}}>
-                <li style={{display: 'flex', alignItems: 'center', marginBottom: '28px', fontFamily: 'DM Sans, sans-serif', fontWeight: 400, fontSize: '28px', color: '#B9B9C3'}}>
-                  <span style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', border: '2px solid #B9B9C3', borderRadius: '8px', marginRight: '18px', background: 'rgba(103,50,217,0.15)'}}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" rx="6" fill="#6732D9"/><path d="M6 10.5L9 13.5L14 8.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </span>
-                  We’ll respond in 24 hours last focused.
-                </li>
-                <li style={{display: 'flex', alignItems: 'center', marginBottom: '28px', fontFamily: 'DM Sans, sans-serif', fontWeight: 400, fontSize: '28px', color: '#B9B9C3'}}>
-                  <span style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', border: '2px solid #B9B9C3', borderRadius: '8px', marginRight: '18px', background: 'rgba(103,50,217,0.15)'}}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" rx="6" fill="#6732D9"/><path d="M6 10.5L9 13.5L14 8.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </span>
-                  Work with seniors & experts, not juniors.
-                </li>
-                <li style={{display: 'flex', alignItems: 'center', fontFamily: 'DM Sans, sans-serif', fontWeight: 400, fontSize: '28px', color: '#B9B9C3'}}>
-                  <span style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', border: '2px solid #B9B9C3', borderRadius: '8px', marginRight: '18px', background: 'rgba(103,50,217,0.15)'}}>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" rx="6" fill="#6732D9"/><path d="M6 10.5L9 13.5L14 8.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                  </span>
-                  NDA? Absolutely just ask.
-                </li>
+              <ul style={{marginBottom: 0, paddingLeft: 0}}>
+                {[
+                  'We’ll respond in 24 hours last focused.',
+                  'Work with seniors & experts, not juniors.',
+                  'NDA? Absolutely just ask.'
+                ].map((text, idx) => (
+                  <li key={idx} style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    marginBottom: idx < 2 ? '28px' : 0,
+                    fontFamily: 'DM Sans, sans-serif',
+                    fontWeight: 400,
+                    fontSize: '24px',
+                    lineHeight: '19.95px',
+                    letterSpacing: '2%',
+                    color: 'rgba(255,255,255,0.65)',
+                    verticalAlign: 'bottom',
+                  }}>
+                    <span style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '32px',
+                      height: '32px',
+                      marginRight: '18px',
+                    }}>
+                      <img src="/images/tick.png" alt="tick" style={{width: '32px', height: '32px', objectFit: 'contain'}} />
+                    </span>
+                    {text}
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="flex-1 flex flex-col gap-6">
-              <div style={{border: '2px solid #B9B9C3', borderRadius: '16px', padding: '24px 32px', display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.02)'}}>
-                <span style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #6732D9 0%, #A259FF 100%)', marginRight: '20px'}}>
-                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="8" fill="none"/><path d="M8.75 10.5C8.75 9.25736 9.75736 8.25 11 8.25H17C18.2426 8.25 19.25 9.25736 19.25 10.5V17.5C19.25 18.7426 18.2426 19.75 17 19.75H11C9.75736 19.75 8.75 18.7426 8.75 17.5V10.5Z" stroke="white" strokeWidth="2"/><path d="M14 15.25C15.2426 15.25 16.25 14.2426 16.25 13C16.25 11.7574 15.2426 10.75 14 10.75C12.7574 10.75 11.75 11.7574 11.75 13C11.75 14.2426 12.7574 15.25 14 15.25Z" stroke="white" strokeWidth="2"/></svg>
+            <div className="flex-1 flex flex-col gap-4" style={{marginTop: 0, marginBottom: 0}}>
+              <div style={{
+                border: '2px solid #B9B9C3',
+                borderRadius: '24px',
+                padding: '8px 18px',
+                display: 'flex',
+                alignItems: 'center',
+                background: 'rgba(255,255,255,0.02)',
+                minHeight: '72px',
+                width: '100%',
+                boxSizing: 'border-box',
+                marginBottom: '8px',
+                gap: '14px',
+              }}>
+                <span style={{position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #6732D9 0%, #A259FF 100%)', marginRight: '20px', overflow: 'visible'}}>
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'relative', zIndex: 1}}><rect width="28" height="28" rx="8" fill="none"/><path d="M8.75 10.5C8.75 9.25736 9.75736 8.25 11 8.25H17C18.2426 8.25 19.25 9.25736 19.25 10.5V17.5C19.25 18.7426 18.2426 19.75 17 19.75H11C9.75736 19.75 8.75 18.7426 8.75 17.5V10.5Z" stroke="white" strokeWidth="2"/><path d="M14 15.25C15.2426 15.25 16.25 14.2426 16.25 13C16.25 11.7574 15.2426 10.75 14 10.75C12.7574 10.75 11.75 11.7574 11.75 13C11.75 14.2426 12.7574 15.25 14 15.25Z" stroke="white" strokeWidth="2"/></svg>
                 </span>
                 <div>
                   <div style={{fontFamily: 'DM Sans, sans-serif', fontWeight: 400, fontSize: '18px', color: '#FFF', opacity: 0.7}}>Phone Number</div>
                   <div style={{fontFamily: 'DM Sans, sans-serif', fontWeight: 700, fontSize: '18px', color: '#FFF', letterSpacing: '0.02em'}}>+92 310-586-4926</div>
                 </div>
               </div>
-              <div style={{border: '2px solid #B9B9C3', borderRadius: '16px', padding: '24px 32px', display: 'flex', alignItems: 'center', background: 'rgba(255,255,255,0.02)'}}>
-                <span style={{display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #6732D9 0%, #A259FF 100%)', marginRight: '20px'}}>
-                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="28" height="28" rx="8" fill="none"/><path d="M8.75 10.5C8.75 9.25736 9.75736 8.25 11 8.25H17C18.2426 8.25 19.25 9.25736 19.25 10.5V17.5C19.25 18.7426 18.2426 19.75 17 19.75H11C9.75736 19.75 8.75 18.7426 8.75 17.5V10.5Z" stroke="white" strokeWidth="2"/><path d="M14 15.25C15.2426 15.25 16.25 14.2426 16.25 13C16.25 11.7574 15.2426 10.75 14 10.75C12.7574 10.75 11.75 11.7574 11.75 13C11.75 14.2426 12.7574 15.25 14 15.25Z" stroke="white" strokeWidth="2"/></svg>
+              <div style={{
+                border: '2px solid #B9B9C3',
+                borderRadius: '24px',
+                padding: '14px 28px',
+                display: 'flex',
+                alignItems: 'center',
+                background: 'rgba(255,255,255,0.02)',
+                minHeight: '96px',
+                width: '100%',
+                boxSizing: 'border-box',
+                marginBottom: 0,
+                gap: '24px',
+              }}>
+                <span style={{position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: '48px', height: '48px', borderRadius: '12px', background: 'linear-gradient(135deg, #6732D9 0%, #A259FF 100%)', marginRight: '20px', overflow: 'visible'}}>
+                  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style={{position: 'relative', zIndex: 1}}><rect width="28" height="28" rx="8" fill="none"/><path d="M8.75 10.5C8.75 9.25736 9.75736 8.25 11 8.25H17C18.2426 8.25 19.25 9.25736 19.25 10.5V17.5C19.25 18.7426 18.2426 19.75 17 19.75H11C9.75736 19.75 8.75 18.7426 8.75 17.5V10.5Z" stroke="white" strokeWidth="2"/><path d="M14 15.25C15.2426 15.25 16.25 14.2426 16.25 13C16.25 11.7574 15.2426 10.75 14 10.75C12.7574 10.75 11.75 11.7574 11.75 13C11.75 14.2426 12.7574 15.25 14 15.25Z" stroke="white" strokeWidth="2"/></svg>
                 </span>
                 <div>
                   <div style={{fontFamily: 'DM Sans, sans-serif', fontWeight: 400, fontSize: '18px', color: '#FFF', opacity: 0.7}}>Email</div>
@@ -398,7 +431,7 @@ export default function GetQuotePage() {
           </div>
         </div>
         <div className="flex justify-center mb-10">
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="bg-[#8f5fff] hover:bg-[#a68cff] text-white font-bold py-3 px-6 rounded transition">Our Location on Google Maps ↗</a>
+          <a href="https://www.google.com/maps/dir/CodeSwift,+Jenan+Abu+Al+Fazal+Plaza,+Office+207,+Floor+2,+Rawalpindi,+46000,+Pakistan/CodeSwift,+Jenan+Abu+Al+Fazal+Plaza,+Office+207,+Floor+2,+Rawalpindi,+46000,+Pakistan/@33.6550117,73.081876,19.05z/data=!4m13!4m12!1m5!1m1!1s0x38df950058b6110d:0x57eb67dc884240a5!2m2!1d73.082888!2d33.653348!1m5!1m1!1s0x38df950058b6110d:0x57eb67dc884240a5!2m2!1d73.082888!2d33.653348?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="bg-[#8f5fff] hover:bg-[#a68cff] text-white font-bold py-3 px-6 rounded transition">Our Location on Google Maps ↗</a>
         </div>
       </div>
       <Footer />
