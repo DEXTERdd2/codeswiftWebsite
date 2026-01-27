@@ -14,9 +14,7 @@ const logos = [
     { src: "/CompanyLogos/pngegg11.svg", alt: "company logo" },
     { src: "/CompanyLogos/pngegg12.svg", alt: "company logo" },
     { src: "/CompanyLogos/pngegg13.svg", alt: "company logo" },
-    { src: "/CompanyLogos/pngegg14.svg", alt: "company logo" },
-     
-
+    { src: "/CompanyLogos/pngegg14.svg", alt: "company logo" }, 
 ];
 
 export default function AnimatedLogoRow() {
