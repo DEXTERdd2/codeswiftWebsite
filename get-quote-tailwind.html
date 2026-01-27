@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Quote - CodeSwift</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'DM Sans', sans-serif; }
+    .gradient-bg {
+      background: linear-gradient(to bottom, #3a2177, #2d0e4a);
+    }
+    .rounded-40 { border-radius: 40px; }
+    .shadow-custom { box-shadow: 0 8px 64px 0 rgba(0,0,0,0.10); }
+    .border-gradient {
+      border: 4.35px solid;
+      border-image: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.0001) 30%, rgba(255,255,255,0.0001) 70%, rgba(255,255,255,0.1) 100%) 1;
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen flex flex-col items-center py-10 px-2 md:px-6">
+  <div class="w-full max-w-4xl rounded-40 overflow-hidden bg-white/5">
+    <div class="flex flex-col items-center mt-32 mb-10">
+      <h1 class="mb-4 text-center font-bold text-[4.35rem] leading-[3.67rem] tracking-[-0.075em] text-white">Get a Quote</h1>
+      <div class="mb-2 text-center flex items-center justify-center gap-2 font-normal text-[1.09rem] leading-[25px] tracking-[-0.01em] text-white opacity-100">
+        <span>Home</span>
+        <span style="font-size:17.39px;opacity:0.5">&gt;</span>
+        <span style="color:#FFF;opacity:0.3">Get a quote</span>
+      </div>
+    </div>
+    <div class="mb-10 p-8 rounded-40 bg-[rgba(45,14,74,0.01)] border-gradient shadow-custom backdrop-blur-md transition-all">
+      <h2 class="text-white mb-6 text-xl font-bold">Get Quote From Us</h2>
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="flex flex-col">
+            <input type="text" placeholder="First Name" class="p-3 rounded bg-transparent border border-gray-400/50 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <input type="text" placeholder="Last Name" class="p-3 rounded bg-transparent border border-gray-400/50 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <input type="text" placeholder="Phone Number" class="p-3 rounded bg-transparent border border-gray-400/50 text-white" />
+          </div>
+          <div class="flex flex-col">
+            <input type="text" placeholder="Country" class="p-3 rounded bg-transparent border border-gray-400/50 text-white" />
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <textarea placeholder="Tell us about your project" class="w-full p-3 rounded bg-transparent border border-gray-400/50 text-white" rows="4"></textarea>
+        </div>
+        <div>
+          <div class="mb-2 text-white text-lg font-semibold">Project type</div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" class="px-8 py-3 rounded-2xl border-2 border-white/40 text-white bg-transparent hover:bg-[#6732D9] transition">UI/UX Design</button>
+            <button type="button" class="px-8 py-3 rounded-2xl border-2 border-white/40 text-white bg-transparent hover:bg-[#6732D9] transition">Software Development</button>
+            <button type="button" class="px-8 py-3 rounded-2xl border-2 border-white/40 text-white bg-transparent hover:bg-[#6732D9] transition">AI Solutions</button>
+            <button type="button" class="px-8 py-3 rounded-2xl border-2 border-white/40 text-white bg-transparent hover:bg-[#6732D9] transition">Digital Marketing</button>
+            <button type="button" class="px-8 py-3 rounded-2xl border-2 border-white/40 text-white bg-transparent hover:bg-[#6732D9] transition">Devops Solutions</button>
+            <button type="button" class="px-8 py-3 rounded-2xl border-2 border-white/40 text-white bg-transparent hover:bg-[#6732D9] transition">Quality Assurance</button>
+          </div>
+        </div>
+        <button type="submit" class="w-full py-3 rounded bg-[#6732D9] font-bold text-white text-lg transition">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="mb-10 mt-16 px-4 md:px-8 w-full max-w-6xl">
+    <h3 class="font-bold text-[48px] leading-[60.2px] tracking-[-0.06em] text-white mb-6">Let’s Work Together</h3>
+    <p class="font-light text-[24px] leading-[37px] tracking-[0.02em] text-[#FFFFFFA6] mb-8">
+      Our experienced team of developers, designers and strategists will work closely with you to understand unique business challenges and objectives. By leveraging cutting edge technologies and best practices, we’ll create customized scalable and future proof solutions that drive growth and streamline operations
+    </p>
+    <div class="flex flex-col md:flex-row gap-8 mt-8">
+      <div class="flex-1">
+        <ul class="mb-0 pl-0">
+          <li class="flex items-center mb-7 text-white/65 text-xl"><img src="/images/tick.png" alt="tick" class="w-8 h-8 mr-4" />We’ll respond in 24 hours last focused.</li>
+          <li class="flex items-center mb-7 text-white/65 text-xl"><img src="/images/tick.png" alt="tick" class="w-8 h-8 mr-4" />Work with seniors & experts, not juniors.</li>
+          <li class="flex items-center text-white/65 text-xl"><img src="/images/tick.png" alt="tick" class="w-8 h-8 mr-4" />NDA? Absolutely just ask.</li>
+        </ul>
+      </div>
+      <div class="flex-1 flex flex-col gap-4">
+        <div class="border-2 border-[#B9B9C3] rounded-2xl p-4 flex items-center bg-white/5 min-h-[72px] w-full mb-2 gap-4">
+          <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-[#6732D9] to-[#A259FF] mr-5">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="none"/><path d="M8.75 10.5C8.75 9.25736 9.75736 8.25 11 8.25H17C18.2426 8.25 19.25 9.25736 19.25 10.5V17.5C19.25 18.7426 18.2426 19.75 17 19.75H11C9.75736 19.75 8.75 18.7426 8.75 17.5V10.5Z" stroke="white" stroke-width="2"/><path d="M14 15.25C15.2426 15.25 16.25 14.2426 16.25 13C16.25 11.7574 15.2426 10.75 14 10.75C12.7574 10.75 11.75 11.7574 11.75 13C11.75 14.2426 12.7574 15.25 14 15.25Z" stroke="white" stroke-width="2"/></svg>
+          </span>
+          <div>
+            <div class="text-white/70 text-lg">Phone Number</div>
+            <div class="font-bold text-white text-lg">+92 310-586-4926</div>
+          </div>
+        </div>
+        <div class="border-2 border-[#B9B9C3] rounded-2xl p-6 flex items-center bg-white/5 min-h-[96px] w-full gap-6">
+          <span class="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-[#6732D9] to-[#A259FF] mr-5">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="8" fill="none"/><path d="M8.75 10.5C8.75 9.25736 9.75736 8.25 11 8.25H17C18.2426 8.25 19.25 9.25736 19.25 10.5V17.5C19.25 18.7426 18.2426 19.75 17 19.75H11C9.75736 19.75 8.75 18.7426 8.75 17.5V10.5Z" stroke="white" stroke-width="2"/><path d="M14 15.25C15.2426 15.25 16.25 14.2426 16.25 13C16.25 11.7574 15.2426 10.75 14 10.75C12.7574 10.75 11.75 11.7574 11.75 13C11.75 14.2426 12.7574 15.25 14 15.25Z" stroke="white" stroke-width="2"/></svg>
+          </span>
+          <div>
+            <div class="text-white/70 text-lg">Email</div>
+            <div class="font-bold text-white text-lg">connect@codeswift.org</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 px-4 md:px-8 w-full max-w-6xl">
+    <div class="relative rounded p-4 text-white border border-gray-400/50 bg-white/5">
+      <div class="absolute right-4 top-4">
+        <div class="flex items-center justify-center bg-[#8752FA] rounded-lg p-2 relative">
+          <!-- Globe Icon -->
+          <svg class="w-3 h-3 text-white relative z-10" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/><path d="M2 12h20M12 2c2.5 2.5 2.5 17.5 0 20M12 2C9.5 4.5 9.5 19.5 12 22" stroke="white" stroke-width="2"/></svg>
+        </div>
+      </div>
+      <div class="pt-12">
+        <div class="font-bold mb-2">Global Coverage:</div>
+        Seamless operations from the USA to Pakistan for enhanced support and service delivery.
+      </div>
+    </div>
+    <div class="relative rounded p-4 text-white border border-gray-400/50 bg-white/5">
+      <div class="absolute right-4 top-4">
+        <div class="flex items-center justify-center bg-[#8752FA] rounded-lg px-1 py-3 relative">
+          <!-- Team Icon -->
+          <svg class="w-3 h-3 text-white relative z-10" fill="none" viewBox="0 0 24 24"><circle cx="8" cy="8" r="4" stroke="white" stroke-width="2"/><circle cx="16" cy="8" r="4" stroke="white" stroke-width="2"/><path d="M2 22c0-4 8-4 8 0M14 22c0-4 8-4 8 0" stroke="white" stroke-width="2"/></svg>
+        </div>
+      </div>
+      <div class="pt-12">
+        <div class="font-bold mb-2">Expert Teams:</div>
+        Senior professionals dedicated to solving complex business challenges and offering tailored solutions.
+      </div>
+    </div>
+    <div class="relative rounded p-4 text-white border border-gray-400/50 bg-white/5">
+      <div class="absolute right-4 top-4">
+        <div class="flex items-center justify-center bg-[#8752FA] rounded-lg p-2 relative">
+          <!-- Protection Icon -->
+          <svg class="w-2 h-2 text-white relative z-10" fill="none" viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9.74-7 10-3.5-0.26-7-5-7-10V6l7-4z" stroke="white" stroke-width="2"/></svg>
+        </div>
+      </div>
+      <div class="pt-12">
+        <div class="font-bold mb-2">Security First:</div>
+        Flexible and secure partnerships, with NDA agreements available upon request to protect your business interests.
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-center mb-10 px-4 md:px-8 w-full max-w-6xl">
+    <a href="https://www.google.com/maps/dir/CodeSwift,+Jenan+Abu+Al+Fazal+Plaza,+Office+207,+Floor+2,+Rawalpindi,+46000,+Pakistan/CodeSwift,+Jenan+Abu+Al+Fazal+Plaza,+Office+207,+Floor+2,+Rawalpindi,+46000,+Pakistan/@33.6550117,73.081876,19.05z/data=!4m13!4m12!1m5!1m1!1s0x38df950058b6110d:0x57eb67dc884240a5!2m2!1d73.082888!2d33.653348!1m5!1m1!1s0x38df950058b6110d:0x57eb67dc884240a5!2m2!1d73.082888!2d33.653348?entry=ttu&g_ep=EgoyMDI2MDExOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex bg-[#6732D9] hover:bg-[#7a5cdb] text-white font-bold py-3 px-6 rounded-[10px] transition">
+      Our Location on Google Maps <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 7l-10 10M17 17V7H7"/></svg>
+    </a>
+  </div>
+</body>
+</html>
